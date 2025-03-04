@@ -41,34 +41,20 @@ When returning the signature to the server, the user will base64url encode the s
 const signChallenge = (challenge: UserActionSignatureChallenge) => {
   /*
   challenge.allowCredentials.key is an array of registered credentials. If you have
-  more than one key you may need to use challenge.allowCredentials.key[N].id to locate
-  the key you are using. For example, you could have made your ID the base64url encoded name of the key on disk or in AWS KMS.
+  more than one Key credential, you may need to use challenge.allowCredentials.key[N].id to locate
+  the key you're using. For example, you could have made your ID the base64url encoded name of the key on disk or in AWS KMS.
 
-  In this example, we are just assuming there is only one key registered.
-  
-  Warning: You should always sanitize values coming from a remote location before using
-  them in a secondary API. Passing a malicious ID to a filesystem command, for example,
-  could allow a remote attacker to execute malicious commands on your system.
+  In this example, we assume the user registered a single Key credential.
   */ 
+  const clientData = { type: 'key.get', challenge: challenge.challenge }
+  
+  const clientDataBytes: Buffer = Buffer.from(JSON.stringify(clientData))
 
-  const clientData: Buffer = Buffer.from(
-    JSON.stringify({
-      type: 'key.get',
-      challenge: challenge.challenge,
-      origin: origin,
-      crossOrigin: false,
-    } as ClientData)
-  )
-
-  const signature = crypto.sign(
-    undefined,
-    clientData,
-    apiKeyPrivateKey
-  )
+  const signature = crypto.sign(undefined, clientDataBytes, apiKeyPrivateKey)
 
   return {
-    clientData: clientData.toString('base64url'),
     credId: challenge.allowCredentials.key[0].id,
+    clientData: clientData.toString('base64url'),
     signature: signature.toString('base64url'),
   }
 }

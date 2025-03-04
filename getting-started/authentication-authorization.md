@@ -44,28 +44,32 @@ The credential -- essentially being a cryptographic key -- you'll need to use to
 
 ## Credentials
 
-In order to complete the [login](../api-docs/authentication/login/ "mention") flow, or to sign User Action Challenges, you'll need to sign challenges using Credentials.
+In order to complete the [login](../api-docs/authentication/login/ "mention") flow, or sign User Action Challenges, users need to sign "challenges" using their Credential.
 
-A Credential is essentially a Public/Private keypair. The Private key is only known by you, while the Public key is provided to Dfns, so that Dfns system can be aware that you own this key, and can register it as being yours.
+A Credential is essentially a public/private cryptographic keypair. The private key is held by the user, while the public key is provided to Dfns to register the credential for the user.
 
-The first time you registered with Dfns, you had to create a Credential (if you used Dfns Dashboard, it prompted you to with WebAuthn prompts). You can also register different credentials later on using our API.
+The first time you registered on Dfns dashboard, you created a Passkey credential. You can also register additional credentials later on using our API.
 
-Different kind of Credentials will be created, depending on your use case, and how you prefer to manage those credentials:
+Different kind of Credentials can be created, depending on your use case, and how you prefer to manage them:
 
-* WebAuthn Credentials -> Use WebAuthn standard to create/manage those keys for you on your device (see more about that below). You can use WebAuthn Credentials if you need a User signature in-browser for example.
+* Fido2 Credentials (aka "Passkeys" / "WebAuthn") -> Uses WebAuthn standard to create/manage passkeys on your device (see more about that below). You can use passkeys if you need a client-side User signature (eg. in a web app / native app).
 * Key Credentials -> "manually" generate keypairs yourself, and store them however you see fit (see [How to generate a keypair](../advanced-topics/authentication/credentials/generate-a-key-pair.md)). You can use Key Credential if you need a Service Account sitting in your server to also be the signer for example.
 
 Depending on the Identity you are using, the Credentials supported are such:
 
 <table><thead><tr><th width="273.3333333333333">Identity</th><th>WebAuthn Credentials</th><th>Key Credentials</th></tr></thead><tbody><tr><td>User</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>PAT (Personal Access Token)</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f6d1">🛑</span></td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>Service Account</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f6d1">🛑</span></td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr></tbody></table>
 
-#### WebAuthn
+#### Passkeys
 
-WebAuthn is a web authentication standard supported by most modern browsers, which leverages your devices key-management features (like touch ID on a mac, a phone authenticator, a yubikey, etc).
+Passkeys is the common term used to describe the Fido2 standard called "WebAuthn". It is a web authentication standard supported by most modern browsers, phones and devices, which leverages your devices key-management features (like touch ID on a mac, a phone authenticator, a yubikey, some password managers support creating and storing passkeys, etc).
 
-Essentially, WebAuthn allows you to create cryptographic keys stored on one of your device (your device enclave), and use them to sign payloads when needed using touch ID (or else). Here's some screenshots with some examples of WebAuthn prompts shown in your browser during Credential creation, or during Signing using those Credentials.
+Thos passkeys can then be used by the user to sign payloads when needed. Here's some screenshots with some examples of WebAuthn prompts shown in your browser during Credential creation, or during Signing using those Credentials.
 
-![](<../.gitbook/assets/image (1) (1) (1) (1) (1).png>) ![](<../.gitbook/assets/image (2) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+
+Below is an example of the promps a user can see on a web app, when a challenge needs to be signed with the passkey: it's asking the user for his biometrics (fingerprint) before using the passkey to sign.
+
+![](<../.gitbook/assets/image (2) (1).png>)
 
 {% hint style="info" %}
 You can read more about WebAuthn on [webauthn.guide](https://webauthn.guide/), and if you want you can test a WebAuthn demo on [webauthn.io](https://webauthn.io/)
