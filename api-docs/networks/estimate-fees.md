@@ -33,23 +33,22 @@ No permission is required for this call
 
 ```json
 {
-  "kind": 'EvmEip1559',
-  "newtwork": 'EthereumGoerli',
-  "estimatedBaseFee": 44,
-  "blockNumber": 10253270,
-  "blockTime": 1703253072,
-  "slow": {
-     maxPriorityFee: 225000003,
-     maxFee: 225000091
-  },
-  "standard": {
-     maxPriorityFee: 300000007,
-     maxFee: 300000095
-  },
-  "fast": {
-     maxPriorityFee: 637524101,
-     maxFee: 637524189
-  }
+    "kind": "Eip1559",
+    "network": "Ethereum",
+    "estimatedBaseFee": "1594798936",
+    "blockNumber": 7838295,
+    "slow": {
+        "maxPriorityFeePerGas": "308373420",
+        "maxFeePerGas": "3497971292"
+    },
+    "standard": {
+        "maxPriorityFeePerGas": "1006011766",
+        "maxFeePerGas": "4195609638"
+    },
+    "fast": {
+        "maxPriorityFeePerGas": "1809702937",
+        "maxFeePerGas": "4999300809"
+    }
 }
 ```
 
