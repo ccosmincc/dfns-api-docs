@@ -35,19 +35,19 @@ No permission is required for this call
 {
     "kind": "Eip1559",
     "network": "Ethereum",
-    "estimatedBaseFee": "1594798936",
-    "blockNumber": 7838295,
+    "baseFeePerGas": "312870588",
+    "blockNumber": 7841330,
     "slow": {
-        "maxPriorityFeePerGas": "308373420",
-        "maxFeePerGas": "3497971292"
+        "maxPriorityFeePerGas": "30139324",
+        "maxFeePerGas": "655880500"
     },
     "standard": {
-        "maxPriorityFeePerGas": "1006011766",
-        "maxFeePerGas": "4195609638"
+        "maxPriorityFeePerGas": "401143796",
+        "maxFeePerGas": "1026884972"
     },
     "fast": {
-        "maxPriorityFeePerGas": "1809702937",
-        "maxFeePerGas": "4999300809"
+        "maxPriorityFeePerGas": "1360050000",
+        "maxFeePerGas": "1985791176"
     }
 }
 ```
