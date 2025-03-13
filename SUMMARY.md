@@ -188,7 +188,10 @@
 * [Staking](integrations/staking/README.md)
   * [API Reference](integrations/staking/api-reference/README.md)
     * [Create Stake](integrations/staking/api-reference/create-stake.md)
+    * [Create Stake Action](integrations/staking/api-reference/create-stake-action.md)
     * [List Stakes](integrations/staking/api-reference/list-stakes.md)
+    * [List Stake Actions](integrations/staking/api-reference/list-stake-actions.md)
+    * [get Rewards](integrations/staking/api-reference/get-rewards.md)
 * [Fiat On/Off-Ramps](integrations/fiat-on-offboarding.md)
 * [Account Abstraction on EVMs](integrations/gasless-transactions.md)
 
