@@ -2,41 +2,46 @@
 
 ## Overview
 
-Welcome to Dfns! This guide will help you get set up with our industry-leading authentication and clone our sample app to test delegated signing.&#x20;
-
-We’ve also created a video walking through this setup for EthParis (July 2023) which you can find [here](https://www.youtube.com/watch?v=uGVjRFeNmWU\&t=313s).  If you have any questions, don't hesitate to reach out to us in DFNSCare. Thanks!
+Welcome to Dfns! This guide will help you get set up with our industry-leading authentication and clone our sample app to test delegated signing. If you have any questions, don't hesitate to reach out to us in DFNSCare. Thanks!
 
 ## Register from Email
 
-1. Dfns staff provisions your new org and creates the first Employee in the organization, called the Org Owner. &#x20;
-2. Org Owner receives an email with a link to register in our system.
+1.  Go to [app.dfns.io/get-started](https://app.dfns.io/get-started) to create a new org and creates the first Employee in the organization, called the Org Owner. \
+    \
 
-![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.45.41 PM.png>)
 
-## Create your Credentials and Login
+    <div align="left"><figure><img src="../.gitbook/assets/Create Account 1  (1).png" alt="" width="375"><figcaption></figcaption></figure></div>
+2. Org Owner receives an email with a link and a code to register in our system.\
+   \
+   ![](<../.gitbook/assets/Screenshot 2025-03-11 at 16.59.24 (1).png>)\
 
-1. Click the link to be directed to the registration page with the username prepopulated.  Copy and paste the registration code from the email. Click the register button.   Note: Registration codes only last 4 hours so if yours is expired, just click "Send New Code To My Email”.&#x20;
+3. Click on the link in the Email and enter the registration code. Here you can see the Org owner and the Org ID.\
+   \
+   ![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.46.34 PM.png>)
+4. You will be asked to create your passkey, passkeys eliminate the need for passwords and use your device’s built-in security features, like Face ID, Touch ID, or a PIN.\
+   \
+   ![](<../.gitbook/assets/Screenshot 2025-02-26 at 13.49.15 (1).png>)\
+   \
 
-![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.46.34 PM.png>)
+5. Last step is to print or save your recovery details in a safe place.\
 
-2. Create credentials and submit.  Login in using the new credentials.&#x20;
 
-![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.46.45 PM.png>)
+## Invite Users and Set Permissions
 
-3. &#x20;Click Settings in the left nav
+1. &#x20;Click Settings in the left nav
 
 ![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.57.10 PM.png>)
 
-4. This should take you to the Users screen
+2. This should take you to the Users screen
 
 ![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.48.01 PM (1).png>)
 
-5. Add Users to the organization by clicking “New User”.  (Note ExternalID is optional)
+3. Add Users to the organization by clicking “New User”.  (Note ExternalID is optional)
 
 ![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.48.11 PM.png>)
 
-6. Employees receive an email and follow the same registration flow.
-7. The Org Owner creates and assigns the necessary permissions to allow users access the parts of the system required for their job responsibilities.  For convenience, we've exposed a control on the user list page to give a user all access to the system here:
+4. Employees receive an email and follow the same registration flow.
+5. The Org Owner creates and assigns the necessary permissions to allow users access the parts of the system required for their job responsibilities.  For convenience, we've exposed a control on the user list page to give a user all access to the system here:
 
 ![](<../.gitbook/assets/Screenshot 2024-08-28 at 1.48.50 PM.png>)
 
