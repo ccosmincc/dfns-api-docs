@@ -119,7 +119,27 @@ Each webhook event has a "`data`" property, which shape depends on its kind. Her
 ```
 {% endcode %}
 
-* For `wallet.blockchainevent.detected` see the [Get History response](https://docs.dfns.co/d/api-docs/wallets/get-wallet-history#response):
+
+
+* For `wallet.blockchainevent.detected` various event kinds are available depending on the indexed chain:\
+
+
+| Kind                                         | Chains                             |
+| -------------------------------------------- | ---------------------------------- |
+| NativeTransfer                               | All                                |
+| Aip21Transfer                                | Aptos                              |
+| AsaTransfer                                  | Algorand                           |
+| CoinTransfer, LockedCoinTransfer             | Iota                               |
+| Erc20Transfer, Erc721Transfer                | Evm                                |
+| Tep74Transfer                                | Ton                                |
+| Trc10Transfer, Trc20Transfer, Trc721Transfer | Tron                               |
+| Sep41Transfer                                | Stellar                            |
+| SplTransfer, Spl2022Transfer                 | Solana                             |
+| UtxoTransfer                                 | Bitcoin, Litecoin, Dogecoin, Kaspa |
+
+
+
+for example, see the [Get History response](https://docs.dfns.co/d/api-docs/wallets/get-wallet-history#response):
 
 {% code title="data" %}
 ```json
@@ -228,7 +248,7 @@ Also, your handler should catch any error that happens on your side, so it still
 
 Verify webhook signatures to confirm that received events are sent from Dfns. Dfns signs webhook events it sends to your endpoints by including a signature in each event’s `X-DFNS-WEBHOOK-SIGNATURE` header. This allows you to verify that the events were sent by Dfns, not by a third party.&#x20;
 
-Dfns signatures is a [HMAC](https://en.wikipedia.org/wiki/Hash-based\_message\_authentication\_code) of the received event payload, using [SHA-256](https://en.wikipedia.org/wiki/SHA-2) hash function and the webhook secret as the secret. It has this shape:
+Dfns signatures is a [HMAC](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) of the received event payload, using [SHA-256](https://en.wikipedia.org/wiki/SHA-2) hash function and the webhook secret as the secret. It has this shape:
 
 ```
 X-DFNS-WEBHOOK-SIGNATURE: sha256=33008aa9673b764cc752362034dfe49ef466315c45d62b3e8cb8588b23d0d06a
@@ -284,7 +304,7 @@ If you use an HTTPS URL for your webhook, we validate that the connection to you
 
 #### Exempt webhook route from CSRF protection <a href="#csrf-protection" id="csrf-protection"></a>
 
-If you’re using Rails, Django, or another web framework, your site might automatically check that every POST request contains a _CSRF token_. This is an important security feature that helps protect you and your users from [cross-site request forgery](https://www.owasp.org/index.php/Cross-Site\_Request\_Forgery\_\(CSRF\)) attempts. However, this security measure might also prevent your site from processing legitimate events. If so, you might need to exempt the webhooks route from CSRF protection.
+If you’re using Rails, Django, or another web framework, your site might automatically check that every POST request contains a _CSRF token_. This is an important security feature that helps protect you and your users from [cross-site request forgery](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_\(CSRF\)) attempts. However, this security measure might also prevent your site from processing legitimate events. If so, you might need to exempt the webhooks route from CSRF protection.
 
 {% tabs %}
 {% tab title="Rails" %}
