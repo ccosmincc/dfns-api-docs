@@ -20,9 +20,17 @@ Creates a new stake.
 
 ## Body <a href="#request-body" id="request-body"></a>
 
-<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th>Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>walletId</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Id of the Dfns wallet making the deposit.</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Enum for the type of asset. Eg "Native" or "ERC20".</td><td>String</td></tr><tr><td><code>amount</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Transaction amount denominated in min units</td><td>String</td></tr><tr><td><code>provider</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Provider, Eg "Figment"</td><td>String</td></tr><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol, Eg "Babylon"</td><td>String</td></tr><tr><td><code>duration</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Duration of staking in Bitcoin block for Babylon</td><td>Number</td></tr></tbody></table>
+<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th width="258.01953125">Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>walletId</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Id of the Dfns wallet making the deposit.</td><td>String</td></tr><tr><td><code>amount</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Transaction amount denominated in min units</td><td>String</td></tr><tr><td><code>provider</code> </td><td>Optional</td><td>Staking Provider, Eg "Figment" </td><td>String</td></tr><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol, Eg "Babylon", "Iota",..</td><td>String</td></tr></tbody></table>
 
-Depending on the asset kind, the body must be completed with some extra parameter identical to the [Transfer Asset from Wallet](../../../api-docs/wallets/transfer-asset-from-wallet.md)
+Currently, only two kind are possible: `LockedNative`  for vested staking on IOTA and `Native`  otherwise.
+
+Depending on the protocol, some arguments are required when creating a stake
+
+| Protocol | fields        | Type      | Remarks        |
+| -------- | ------------- | --------- | -------------- |
+| Babylon  | `duration`    | number    |                |
+| Iota     | `amount`      | string    | native staking |
+| Iota     | `lockedIotas` | string\[] | vested staking |
 
 **Example**
 
@@ -32,7 +40,6 @@ Depending on the asset kind, the body must be completed with some extra paramete
   "provider": "Figment",
   "protocol": "Babylon",
   "duration": 150,
-  "kind": "Native",
   "amount": "50000"
 }
 ```
@@ -56,7 +63,6 @@ Depending on the asset kind, the body must be completed with some extra paramete
       "appId": "ap-3g5ir-mt688-xxxxxxxxxxxxxxxx"
     },
     "requestBody": {
-      "kind": "Native",
       "amount": "50000",
       "walletId": "wa-fd328-9v5a8-xxxxxxxxxxxxxxxx",
       "provider": "Figment",
@@ -76,7 +82,6 @@ Depending on the asset kind, the body must be completed with some extra paramete
       "appId": "ap-3g5ir-mt688-xxxxxxxxxxxxxxxx"
     },
     "requestBody": {
-      "kind": "Native",
       "amount": "50000",
       "walletId": "wa-fd328-9v5a8-xxxxxxxxxxxxxxxx",
       "provider": "Figment",
@@ -87,3 +92,7 @@ Depending on the asset kind, the body must be completed with some extra paramete
   }
 }
 ```
+
+## Remarks <a href="#response" id="response"></a>
+
+When creating a stake it will implicitly create a `StakeAction` with kind `Stake`

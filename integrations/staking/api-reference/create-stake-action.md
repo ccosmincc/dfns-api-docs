@@ -24,7 +24,7 @@ Creates a new stake action.
 
 ## Body <a href="#request-body" id="request-body"></a>
 
-<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th>Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol, Eg "Babylon", "Ethereum"</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform</td><td>String</td></tr></tbody></table>
+<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th>Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol, Eg "Babylon", "Ethereum", "Iota"</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform</td><td>String</td></tr></tbody></table>
 
 
 

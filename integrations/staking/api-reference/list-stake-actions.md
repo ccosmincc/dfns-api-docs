@@ -37,23 +37,33 @@ Retrieves a list of exchanges.
 {
   "items": [
     {
-      "id": "stk-5q230-nl4b0-xxxxxxxxxxxxxxxx",
-      "stakeId": "stka-5q230-nl4b0-xxxxxxxxxxxxxxxx",
-      "transactionId": "1dd3b430-729e-4935-8da1-bc7af56a4e7a",
-      "kind": "Withdraw",
-      "protocol": "Babylon",
+      "id": "stka-6q2kv-838tf-8nbofcddhf3a13hu",
+      "stakeId": "stk-5mgj6-kkogb-8fhplpfsnjik3u3m",
+      "transactionId": "tx-3434j-tl8ou-94obe8il3bi1krcv",
+      "kind": "Stake",
       "requester": {
-        "userId": "us-3htce-s75t3-xxxxxxxxxxxxxxxx",
-        "tokenId": "to-72305-jh38s-xxxxxxxxxxxxxxxx",
-        "appId": "ap-3g5ir-mt688-xxxxxxxxxxxxxxxx"
+        "userId": "us-gob8o-mm189-4hbgrpl4fjgcoqh",
+        "tokenId": "to-2hebo-3ga68-9h09mhc1lborpnot",
+        "appId": "ap-604pj-npt53-92np1nrefcqbc7hn"
       },
       "requestBody": {
-        "kind": "Withdraw",
-        "protocol": "Babylon",
+        "walletId": "wa-2l3v7-kiba0-8gs9cj4m8eteph0u",
+        "protocol": "Iota",
+        "validator": "0x392316417a23198afeeb80d9fec314c65162ab5ad18f8a4c3375d31deab29670",
+        "objectIds": [
+          "0xd33ab1cfc6ace10d9b79461b299cfd1f658a56e7b94ad18976a4860c6bc60ac1"
+        ]
       },
-      "dateCreated": "2024-11-27T19:05:33.551Z"
-    },
+      "dateCreated": "2025-03-20T17:52:55.116Z"
+      "data": {}
+    }
   ],
   "nextPageToken": "eJyrVspMUbJSKi7J1jUtNDI20M3LMUky0LVIK7VMSkktS81LLTE2TMpUqgUABv8NBA"
 }
 ```
+
+### Remarks <a href="#response-example" id="response-example"></a>
+
+In the stake action information, the data can give useful information on the staking transaction.
+
+For example, for Iota, data shows the stakeObject Ids and the expiration (in case of vested staking)
