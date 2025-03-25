@@ -55,7 +55,12 @@ Retrieves a list of exchanges.
         ]
       },
       "dateCreated": "2025-03-20T17:52:55.116Z"
-      "data": {}
+      "data": {
+        "stakedObjectIds": [
+          "0x4efd89d885701106f732b79b837fd2fe92a692da9f2291822dcef7fc59a1ec59"
+        ],
+        "expirationTimestampMs": "1743703425704"
+      }
     }
   ],
   "nextPageToken": "eJyrVspMUbJSKi7J1jUtNDI20M3LMUky0LVIK7VMSkktS81LLTE2TMpUqgUABv8NBA"
