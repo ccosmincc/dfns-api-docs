@@ -24,13 +24,24 @@ Creates a new stake.
 
 Currently, only two kind are possible: `LockedNative`  for vested staking on IOTA and `Native`  otherwise.
 
-Depending on the protocol, some arguments are required when creating a stake
+Depending on the protocol, some arguments are required when creating a stake:\
 
-| Protocol | fields        | Type      | Remarks        |
-| -------- | ------------- | --------- | -------------- |
-| Babylon  | `duration`    | number    |                |
-| Iota     | `amount`      | string    | native staking |
-| Iota     | `lockedIotas` | string\[] | vested staking |
+
+#### Babylon
+
+| fields                                       | Type   |
+| -------------------------------------------- | ------ |
+| `duration`<mark style="color:red;">\*</mark> | number |
+
+#### Iota
+
+You need to choose between amount and lockedIotas to indicate if you want to stake vested coins or native coins
+
+| fields                                        | Type      | Remarks            |
+| --------------------------------------------- | --------- | ------------------ |
+| `validator`<mark style="color:red;">\*</mark> | string    |                    |
+| `amount`                                      | string    | for native staking |
+| `lockedIotas`                                 | string\[] | for vested staking |
 
 **Example**
 
