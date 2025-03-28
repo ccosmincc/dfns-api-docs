@@ -130,6 +130,8 @@
   * [Advanced Wallet APIs](api-docs/wallets/advanced-wallet-apis/README.md)
     * [Import Wallet](api-docs/wallets/advanced-wallet-apis/wallet-import.md)
     * [Export Wallet](api-docs/wallets/advanced-wallet-apis/export-wallet.md)
+* [Fee Sponsors](api-docs/fee-sponsors/README.md)
+  * [Create Fee Sponsor](api-docs/fee-sponsors/create-fee-sponsor.md)
 * [Keys](api-docs/keys/README.md)
   * [Create Key](api-docs/keys/create-key.md)
   * [Get Key by ID](api-docs/keys/get-key-by-id.md)
