@@ -1,6 +1,6 @@
 # Permissions Overview
 
-Permissions enable you to control access to the API on a granular basis (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle\_of\_least\_privilege)). As an example, if you have an employee who needs to initiate payments, but shouldn't be able to manipulate policies, you can do that.
+Permissions enable you to control access to the API on a granular basis (following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)). As an example, if you have an employee who needs to initiate payments, but shouldn't be able to manipulate policies, you can do that.
 
 Start by [Creating a Permission](permissions/createpermission.md) with some allowed operations in it, and [Assign it](permissions/createassignment.md) to a User.
 
@@ -25,13 +25,14 @@ This Permission is automatically assigned to the first User of the Organisation.
 This  unique Permission **is assigned by default to any new EndUser** in your organisation, and comes with an initial set of operations (which you can update at any time) allowing any `EndUser` to "do stuff with the wallet he owns" by default. Here are the initial set of operations in this permission:
 
 ```
+Keys:Read
+Keys:Signatures:Create
+Keys:Signatures:Read
 Wallets:Read
-Wallets:ReadSignature
-Wallets:ReadTransaction
-Wallets:ReadTransfer
-Wallets:GenerateSignature
-Wallets:BroadcastTransaction
-Wallets:TransferAsset
+Wallets:Transactions:Create
+Wallets:Transactions:Read
+Wallets:Transfers:Create
+Wallets:Transfers:Read
 ```
 
 {% hint style="info" %}
@@ -48,87 +49,94 @@ This permission is not immutable, and you still have full-control over it (updat
 
 Here's a list of all operations available in Dfns API:
 
-```
-AssetAccounts:Archive
-AssetAccounts:Create
-AssetAccounts:Read
-Auth:Action:Sign
-Auth:Apps:Create
-Auth:Apps:Read
-Auth:Apps:Update
-Auth:Creds:Create
-Auth:Creds:Read
-Auth:Creds:Update
-Auth:Types:Application
-Auth:Types:Employee
-Auth:Types:EndUser
-Auth:Types:Pat
-Auth:Types:ServiceAccount
-Auth:Users:Create
-Auth:Users:Delegate
-Auth:Users:Read
-Auth:Users:Update
-Balances:Read
-CallbackEvents:Read
-CallbackSubscriptions:Archive
-CallbackSubscriptions:Create
-CallbackSubscriptions:Read
-Payments:Create
-Payments:Read
-PermissionAssignments:Create
-PermissionAssignments:Read
-PermissionAssignments:Revoke
-PermissionPredicates:Archive
-PermissionPredicates:Create
-PermissionPredicates:Read
-PermissionPredicates:Update
-Permissions:Archive
-Permissions:Create
-Permissions:Read
-Permissions:Update
-Policies:Archive
-Policies:Create
-Policies:Read
-Policies:Update
-Policies:Approvals:Read
-Policies:Approvals:Approve
-PolicyControlExecutions:Read
-PolicyControlExecutions:Update
-PolicyControls:Archive
-PolicyControls:Create
-PolicyControls:Read
-PolicyControls:Update
-PolicyRules:Archive
-PolicyRules:Create
-PolicyRules:Read
-PolicyRules:Update
-PublicKeyAddresses:Read
-PublicKeys:Create
-PublicKeys:Read
-Signatures:Create
-Signatures:Read
-Signers:ListSigners
-Transactions:Create
-Transactions:Read
-Wallets:BroadcastTransaction
-Wallets:Create
-Wallets:Delegate
-Wallets:Export
-Wallets:GenerateSignature
-Wallets:Import
-Wallets:Read
-Wallets:ReadSignature
-Wallets:ReadTransaction
-Wallets:ReadTransfer
-Wallets:TransferAsset
-Wallets:Update
-Wallets:Tags:Create
-Wallets:Tags:Delete
-Webhooks:Create
-Webhooks:Read
-Webhooks:Update
-Webhooks:Delete
-Webhooks:Ping
-Webhooks:Events:Read
+```typescript
+[
+  'Auth:Action:Sign', // only needed for Apps, not for users
+  'Auth:Apps:Create',
+  'Auth:Apps:Read',
+  'Auth:Apps:Update',
+  'Auth:Creds:Create',  // only needed for Apps, not for users
+  'Auth:Creds:Read',  // only needed for Apps, not for users
+  'Auth:Creds:Update',
+  'Auth:Creds:Code:Create',  // only needed for Apps, not for users
+  'Auth:Types:Application',
+  'Auth:Types:Employee',
+  'Auth:Types:EndUser',
+  'Auth:Types:Pat',
+  'Auth:Types:ServiceAccount',
+  'Auth:Users:Create',
+  'Auth:Users:Delegate',
+  'Auth:Users:Read',
+  'Auth:Users:Update',
+  'Exchanges:Create',
+  'Exchanges:Read',
+  'Exchanges:Delete',
+  'Exchanges:Deposits:Create',
+  'Exchanges:Withdrawals:Create',
+  'FeeSponsors:Create',
+  'FeeSponsors:Read',
+  'FeeSponsors:Update',
+  'FeeSponsors:Delete',
+  'Orgs:Read',
+  'Orgs:Update',
+  'Orgs:Settings:Read',
+  'Orgs:Settings:Update',
+  'PermissionAssignments:Create',
+  'PermissionAssignments:Read',
+  'PermissionAssignments:Revoke',
+  'PermissionPredicates:Archive',
+  'PermissionPredicates:Create',
+  'PermissionPredicates:Read',
+  'PermissionPredicates:Update',
+  'Permissions:Archive',
+  'Permissions:Create',
+  'Permissions:Read',
+  'Permissions:Update',
+  'Policies:Archive',
+  'Policies:Create',
+  'Policies:Read',
+  'Policies:Update',
+  'Policies:Approvals:Read',
+  'Policies:Approvals:Approve',
+  'Signers:ListSigners',
+  'Stakes:Create',
+  'Stakes:Read',
+  'Stakes:Update',
+  'Keys:Create',
+  'Keys:Read',
+  'Keys:Update',
+  'Keys:Reuse',
+  'Keys:Delegate',
+  'Keys:Import',
+  'Keys:Export',
+  'Keys:Signatures:Create',
+  'Keys:Signatures:Read',
+  'Wallets:Create',
+  'Wallets:Read',
+  'Wallets:Update',
+  'Wallets:Tags:Add',
+  'Wallets:Tags:Delete',
+  'Wallets:Transactions:Create',
+  'Wallets:Transactions:Read',
+  'Wallets:Transfers:Create',
+  'Wallets:Transfers:Read',
+  'Wallets:Delegate',
+  'Wallets:Import',
+  'Wallets:Export',
+  'Wallets:GenerateSignature',
+  'Wallets:ReadSignature',
+  'Wallets:BroadcastTransaction',
+  'Wallets:ReadTransaction',
+  'Wallets:TransferAsset',
+  'Wallets:ReadTransfer',
+  'Webhooks:Create',
+  'Webhooks:Read',
+  'Webhooks:Update',
+  'Webhooks:Delete',
+  'Webhooks:Ping',
+  'Webhooks:Events:Read',
+  'Billing:Read',
+  'Billing:Write',
+]
 ```
 
