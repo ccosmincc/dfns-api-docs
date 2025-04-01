@@ -72,7 +72,7 @@ Transfer the native token of the network. All networks support the native token 
       <tr>
          <td><code>feeSponsorId</code></td>
          <td>(Optional) String</td>
-         <td>A fee sponsor id to sponsor the transaction fee by another wallet (read more <a href="../../fee-sponsors/README.md">here</a>)</td>
+         <td>A fee sponsor id to sponsor the transaction fee by another wallet (read more <a href="../fee-sponsor">here</a>)</td>
       </tr>
    </tbody>
 </table>
@@ -344,7 +344,7 @@ Transfer [SPL tokens](https://spl.solana.com/token).
        <tr>
          <td><code>feeSponsorId</code></td>
          <td>Optional</td>
-         <td>A fee sponsor id to sponsor the transaction fee by another wallet (read more <a href="../../fee-sponsors/README.md">here</a>)</td>
+         <td>A fee sponsor id to sponsor the transaction fee by another wallet (read more <a href="../fee-sponsor">here</a>)</td>
          <td>String</td>
       </tr>
    </tbody>
@@ -397,14 +397,14 @@ Transfer [SPL 2022 tokens](https://spl.solana.com/token-2022).
 
 #### Request body <a href="#spl2022-request-body" id="spl2022-request-body"></a>
 
-| Request body fields        | Required/Optional | Description                                                                                                                   | Type    |
-| -------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `kind`                     | Required          | `Spl2022`                                                                                                                     | String  |
-| `mint`                     | Required          | The mint account address                                                                                                      | String  |
-| `to`                       | Required          | The destination address                                                                                                       | String  |
-| `amount`                   | Required          | The amount of tokens to transfer in minimum denomination                                                                      | String  |
-| `createDestinationAccount` | Optional          | If True, pay to create the associated token account of the recipient if it doesn't exist. Defaults to False.                  | Boolean |
-| `feeSponsorId`             | Optional          | A fee sponsor id to sponsor the transaction fee by another wallet (read more <a href="../../fee-sponsors/README.md">here</a>) | String  |
+| Request body fields        | Required/Optional | Description                                                                                                     | Type    |
+| -------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------- | ------- |
+| `kind`                     | Required          | `Spl2022`                                                                                                       | String  |
+| `mint`                     | Required          | The mint account address                                                                                        | String  |
+| `to`                       | Required          | The destination address                                                                                         | String  |
+| `amount`                   | Required          | The amount of tokens to transfer in minimum denomination                                                        | String  |
+| `createDestinationAccount` | Optional          | If True, pay to create the associated token account of the recipient if it doesn't exist. Defaults to False.    | Boolean |
+| `feeSponsorId`             | Optional          | A fee sponsor id to sponsor the transaction fee by another wallet (read more <a href="../fee-sponsor">here</a>) | String  |
 
 
 #### Sample request body <a href="#sample-spl2022-request" id="sample-spl2022-request"></a>

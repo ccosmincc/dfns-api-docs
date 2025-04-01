@@ -2,7 +2,7 @@
 
 `GET /fee-sponsors`
 
-Retrieves a lit of fee sponsors.
+Retrieves a list of fee sponsors.
 
 {% hint style="info" %}
 * Request headers required. See [Request Headers](../../getting-started/request-headers.md) for more information.

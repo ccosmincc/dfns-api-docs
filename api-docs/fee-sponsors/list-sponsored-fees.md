@@ -2,7 +2,7 @@
 
 `GET /fee-sponsors/{feeSponsorId}/fees`
 
-Retrieves a lit of fee sponsors.
+Retrieves the list of all fees paid by a fee sponsor.
 
 {% hint style="info" %}
 * Request headers required. See [Request Headers](../../getting-started/request-headers.md) for more information.
