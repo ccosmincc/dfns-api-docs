@@ -16,15 +16,21 @@ Tags are a way to add arbitrary metadata to wallets which can be used to [filter
 | ------------------ | --------------- |
 | `Wallets:Tags:Add` | Always Required |
 
-## Path parameters <a href="#path-parameters" id="path-parameters"></a>
+## Parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Path parameter | Description                                                              |
-| -------------- | ------------------------------------------------------------------------ |
-| `walletId`     | Unique identifier of the `Wallet`. ex. `wa-1f04s-lqc9q-xxxxxxxxxxxxxxxx` |
+### Path parameters <a href="#path-parameters" id="path-parameters"></a>
 
-## Request body <a href="#native-currency-request-body" id="native-currency-request-body"></a>
+| Path parameter | Description                      |
+| -------------- | -------------------------------- |
+| `walletId`     | Unique identifier of the wallet. |
 
-<table><thead><tr><th width="133">Property</th><th width="134">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>tags</code><mark style="color:red;">*</mark></td><td>String List</td><td>The tags to apply to the wallet</td></tr></tbody></table>
+## Request Body <a href="#native-currency-request-body" id="native-currency-request-body"></a>
+
+| Field  | Description                     | Type - Optional |
+| ------ | ------------------------------- | --------------- |
+| `tags` | The tags to apply to the wallet | Array\<String>  |
+
+### Example
 
 ```shell
 {
@@ -32,7 +38,9 @@ Tags are a way to add arbitrary metadata to wallets which can be used to [filter
 }
 ```
 
-### 200 Response <a href="#native-currency-response-example" id="native-currency-response-example"></a>
+## Response Body <a href="#native-currency-response-example" id="native-currency-response-example"></a>
+
+### 200 Success <a href="#native-currency-response-example" id="native-currency-response-example"></a>
 
 ```json
 {}

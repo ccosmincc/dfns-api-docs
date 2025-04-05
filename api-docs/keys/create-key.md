@@ -17,7 +17,7 @@ Creates a key for the given scheme and curve. Returns a new key entity.&#x20;
 | `Keys:Create`   | Always Required.                       |
 | `Keys:Delegate` | Required if `delegateTo` is specified. |
 
-## Request <a href="#request-body" id="request-body"></a>
+## Request Body <a href="#request-body" id="request-body"></a>
 
 | Field             | Description                                                                                                                                                    | Type - Optional      |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
@@ -36,7 +36,7 @@ Creates a key for the given scheme and curve. Returns a new key entity.&#x20;
 }
 ```
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
 | Field          | Description                                                                                      | Type - Optional      |
 | -------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -64,4 +64,3 @@ Creates a key for the given scheme and curve. Returns a new key entity.&#x20;
   "dateCreated": "2025-03-26T20:25:52.909Z"
 }
 ```
-

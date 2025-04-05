@@ -19,11 +19,11 @@ Retrieves a key by its ID.
 
 ### Path parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Path parameter | Description                                                           |
-| -------------- | --------------------------------------------------------------------- |
-| `keyId`        | Unique identifier of the key, ex. `key-6ece3-9l565-xxxxxxxxxxxxxxxx`. |
+| Path parameter | Description                   |
+| -------------- | ----------------------------- |
+| `keyId`        | Unique identifier of the key. |
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
 See [Create Key response](create-key.md#response).
 
@@ -40,4 +40,3 @@ See [Create Key response](create-key.md#response).
   "dateCreated": "2025-03-26T20:25:52.909Z"
 }
 ```
-

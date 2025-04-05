@@ -1,13 +1,13 @@
-# Delegate Wallet
+---
+icon: diamond-exclamation
+---
+
+# \[deprecated] Delegate Wallet
 
 `POST /wallets/:walletId/delegate`
 
-{% hint style="warning" %}
-Only wallets created with "`delayDelegation: true`" can then be delegated to an end-user. It means you need to know ahead of time that you're creating a wallet meant to be delegated to an end-user later. This is a safety to prevent, for example, a treasury wallet from being unintentionally delegated to an end-user.&#x20;
-{% endhint %}
-
 {% hint style="danger" %}
-This operation is irreversible. The wallet ownership will be transferred to the end-user
+Delegate Wallet is deprecated. Please use [Delegate Key](../keys/delegate-key.md) instead.
 {% endhint %}
 
 In most cases, when you want to implement [Delegated Signing](../../advanced-topics/delegated-signing.md), simply have the end-user create the wallet, in which case it will the non-custodial from the start.  There are some rare cases, however, where the wallet must be created before the user has accessed the system.  To accommodate this, we've added the ability to create a wallet from a service account, and then later delegate it (ie. transfer ownership of it) to an end user via this endpoint.
@@ -24,7 +24,15 @@ In most cases, when you want to implement [Delegated Signing](../../advanced-top
 | --------------- | --------------- |
 | `Keys:Delegate` | Always Required |
 
-## Request <a href="#request-body" id="request-body"></a>
+## Parameters <a href="#request-example.1" id="request-example.1"></a>
+
+### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+
+| Path parameter | Description                      |
+| -------------- | -------------------------------- |
+| `walletId`     | Unique identifier of the wallet. |
+
+## Request Body <a href="#request-body" id="request-body"></a>
 
 | Field    | Description                                       | Type   |
 | -------- | ------------------------------------------------- | ------ |
@@ -38,7 +46,7 @@ In most cases, when you want to implement [Delegated Signing](../../advanced-top
 }
 ```
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
 The response indicates the status of the operation.
 
@@ -46,6 +54,7 @@ The response indicates the status of the operation.
 
 ```json
 {
+  "walletId": "wa-1f04s-lqc9q-xxxxxxxxxxxxxxxx",
   "status": "Delegated"
 }
 ```

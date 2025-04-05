@@ -86,7 +86,7 @@ The Dfns change log documents changes to our product functionality made by our r
 
 ### May 3, 2024
 
-* Launched [new endpoints](wallets/update-wallet-tags.md) for tagging wallets for Policy Engine filters
+* Launched [new endpoints](wallets/add-wallet-tags.md) for tagging wallets for Policy Engine filters
 * Launched cross platform registration with a one-time code
 * Upgraded ZeroDev SDK version
 

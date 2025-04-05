@@ -19,11 +19,11 @@ Retrieves a Wallet by its ID.
 
 ### Path parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Path parameter | Description       |
-| -------------- | ----------------- |
-| `walletId`     | ID of the wallet. |
+| Path parameter | Description                      |
+| -------------- | -------------------------------- |
+| `walletId`     | Unique identifier of the wallet. |
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
 See [Create Wallet response](create-wallet/#response).
 

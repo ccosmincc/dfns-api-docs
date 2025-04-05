@@ -1,4 +1,4 @@
-# List Wallet Transfer Requests
+# List Transfer Requests
 
 `GET /wallets/{walletId}/transfers?paginationToken={token}`
 
@@ -11,28 +11,34 @@ Retrieves a list of transfer requests for the specified wallet.
 
 ## Required Permissions
 
-| Name                   | Conditions      |
-| ---------------------- | --------------- |
-| `Wallets:ReadTransfer` | Always Required |
+| Name                     | Conditions      |
+| ------------------------ | --------------- |
+| `Wallets:Transfers:Read` | Always Required |
 
 ## Parameters <a href="#parameters.1" id="parameters.1"></a>
 
 ### Path parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Path parameter | Description                                                              |
-| -------------- | ------------------------------------------------------------------------ |
-| `walletId`     | Unique identifier of the `Wallet`. ex. `wa-39abb-e9kpk-xxxxxxxxxxxxxxxx` |
+| Path parameter | Description                      |
+| -------------- | -------------------------------- |
+| `walletId`     | Unique identifier of the wallet. |
 
 ### Query parameters <a href="#request-example.1" id="request-example.1"></a>
 
-| Query string parameter | Required/Optional | Description                                                                                         | Type   |
-| ---------------------- | ----------------- | --------------------------------------------------------------------------------------------------- | ------ |
-| `limit`                | Optional          | Maximum number of items to return. Default to 50.                                                   | Number |
-| `paginationToken`      | Optional          | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String |
+| Query parameter   | Description                                                                                         | Type - Optional      |
+| ----------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
+| `limit`           | Maximum number of items to return. Default to 100.                                                  | Integer _(optional)_ |
+| `paginationToken` | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_  |
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
-### 200 Response example <a href="#response-example" id="response-example"></a>
+| Field           | Description                                                                                                  | Type - Optional                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `walletId`      | ID of the wallet.                                                                                            | String                                                          |
+| `items`         | List of signature requests.                                                                                  | See [Transfer Asset Response](transfer-asset.md#response-body). |
+| `nextPageToken` | Opaque token used to retrieve the next page of items by setting as `paginationToken` in the query parameter. | String _(optional)_                                             |
+
+### 200 Success <a href="#response-example" id="response-example"></a>
 
 ```json
 {

@@ -8,28 +8,55 @@ Wallets also support [Delegated Signing](../../advanced-topics/delegated-signing
 
 You can use any of the follow enumerated types in the `network` field of [Create Wallet](https://docs.dfns.co/dfns-docs/api-docs/wallets/create-wallet#request-body):
 
-<table><thead><tr><th width="198">Mainnets</th><th width="211" align="center">Testnets</th><th width="71" align="center">Tier</th><th width="165" align="center">Standards</th><th>Confirmation Delay*</th></tr></thead><tbody><tr><td><code>Algorand</code></td><td align="center"><code>AlgorandTestnet</code></td><td align="center">1</td><td align="center">ASA</td><td>7</td></tr><tr><td><code>Aptos</code></td><td align="center"><code>AptosTestnet</code></td><td align="center">1</td><td align="center">AIP-21</td><td>30</td></tr><tr><td><code>ArbitrumOne</code></td><td align="center"><code>ArbitrumSepolia</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>AvalancheC</code></td><td align="center"><code>AvalancheCFuji</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>Base</code></td><td align="center"><code>BaseSepolia</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>Berachain</code></td><td align="center"><code>BerachainBepolia</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>5</td></tr><tr><td><code>Bitcoin</code></td><td align="center"><code>BitcoinSignet</code></td><td align="center">1</td><td align="center">N/A</td><td>2</td></tr><tr><td><code>Bsc</code></td><td align="center"><code>BscTestnet</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>Cardano</code></td><td align="center"><code>CardanoPreprod</code></td><td align="center">2</td><td align="center">N/A</td><td>N/A</td></tr><tr><td><code>Dogecoin</code></td><td align="center">No testnet support</td><td align="center">1</td><td align="center">N/A</td><td>40</td></tr><tr><td><code>Ethereum</code></td><td align="center"><code>EthereumSepolia</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>12</td></tr><tr><td><code>FantomOpera</code></td><td align="center"><code>FantomTestnet</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>5</td></tr><tr><td><code>ICP</code> (aka Dfinity) **</td><td align="center">No testnet support</td><td align="center">1</td><td align="center">OGY (ICRC support per request)</td><td>2</td></tr><tr><td><code>Ion</code></td><td align="center"><code>IonTestnet</code></td><td align="center">1</td><td align="center">TEP-74/Jetton</td><td>15</td></tr><tr><td><code>Iota</code> **</td><td align="center"><code>IotaTestnet</code></td><td align="center">1</td><td align="center">N/A</td><td>N/A</td></tr><tr><td><code>Kaspa</code> **</td><td align="center">No testnet support</td><td align="center">1</td><td align="center">N/A</td><td>20</td></tr><tr><td><code>Kusama</code></td><td align="center"><code>Westend</code></td><td align="center">2</td><td align="center">N/A</td><td>N/A</td></tr><tr><td><code>Litecoin</code></td><td align="center">No testnet support</td><td align="center">1</td><td align="center">N/A</td><td>12</td></tr><tr><td><code>Optimism</code></td><td align="center"><code>OptimismSepolia</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>Polkadot</code></td><td align="center"><code>Westend</code></td><td align="center">2</td><td align="center">N/A</td><td>N/A</td></tr><tr><td><code>Polygon</code></td><td align="center"><code>PolygonAmoy</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>Polymesh</code> **</td><td align="center"><code>PolymeshTestnet</code></td><td align="center">1</td><td align="center">N/A</td><td>4</td></tr><tr><td><code>Race</code></td><td align="center"><code>RaceSepolia</code></td><td align="center">1</td><td align="center">ERC-20, ERC-721</td><td>50</td></tr><tr><td><code>SeiPacific1</code></td><td align="center"><code>SeiAtlantic2</code></td><td align="center">1</td><td align="center">N/A</td><td>150</td></tr><tr><td><code>Solana</code></td><td align="center"><code>SolanaDevnet</code></td><td align="center">1</td><td align="center">SPL/SPL2022</td><td>8</td></tr><tr><td><code>Stellar</code></td><td align="center"><code>StellarTestnet</code></td><td align="center">1</td><td align="center">SEP-41/Classic</td><td>2</td></tr><tr><td><code>Tezos</code></td><td align="center"><code>TezosGhostnet</code></td><td align="center">2</td><td align="center">N/A</td><td>N/A</td></tr><tr><td><code>Ton</code></td><td align="center"><code>TonTestnet</code></td><td align="center">1</td><td align="center">TEP-74/Jetton</td><td>15</td></tr><tr><td><code>Tron</code></td><td align="center"><code>TronNile</code></td><td align="center">1</td><td align="center">TRC-10, TRC-20, TRC-721</td><td>19</td></tr><tr><td><code>XrpLedger</code> (aka Ripple)</td><td align="center"><code>XrpLedgerTestnet</code></td><td align="center">2</td><td align="center">N/A</td><td>N/A</td></tr></tbody></table>
+| Mainnets                 |      Testnets      | Tier |            Standards           | Confirmation Delay\* |
+| ------------------------ | :----------------: | :--: | :----------------------------: | -------------------- |
+| `Algorand`               |  `AlgorandTestnet` |   1  |               ASA              | 7                    |
+| `Aptos`                  |   `AptosTestnet`   |   1  |             AIP-21             | 30                   |
+| `ArbitrumOne`            |  `ArbitrumSepolia` |   1  |         ERC-20, ERC-721        | 50                   |
+| `AvalancheC`             |  `AvalancheCFuji`  |   1  |         ERC-20, ERC-721        | 50                   |
+| `Base`                   |    `BaseSepolia`   |   1  |         ERC-20, ERC-721        | 50                   |
+| `Berachain`              | `BerachainBepolia` |   1  |         ERC-20, ERC-721        | 5                    |
+| `Bitcoin`                |   `BitcoinSignet`  |   1  |               N/A              | 2                    |
+| `Bsc`                    |    `BscTestnet`    |   1  |         ERC-20, ERC-721        | 50                   |
+| `Cardano`                |  `CardanoPreprod`  |   2  |               N/A              | N/A                  |
+| `Dogecoin`               | No testnet support |   1  |               N/A              | 40                   |
+| `Ethereum`               |  `EthereumSepolia` |   1  |         ERC-20, ERC-721        | 12                   |
+| `FantomOpera`            |   `FantomTestnet`  |   1  |         ERC-20, ERC-721        | 5                    |
+| `ICP` (aka Dfinity) \*\* | No testnet support |   1  | OGY (ICRC support per request) | 2                    |
+| `Ion`                    |    `IonTestnet`    |   1  |          TEP-74/Jetton         | 15                   |
+| `Iota` \*\*              |    `IotaTestnet`   |   1  |               N/A              | N/A                  |
+| `Kaspa` \*\*             | No testnet support |   1  |               N/A              | 20                   |
+| `Kusama`                 |      `Westend`     |   2  |               N/A              | N/A                  |
+| `Litecoin`               | No testnet support |   1  |               N/A              | 12                   |
+| `Optimism`               |  `OptimismSepolia` |   1  |         ERC-20, ERC-721        | 50                   |
+| `Polkadot`               |      `Westend`     |   2  |               N/A              | N/A                  |
+| `Polygon`                |    `PolygonAmoy`   |   1  |         ERC-20, ERC-721        | 50                   |
+| `Polymesh` \*\*          |  `PolymeshTestnet` |   1  |               N/A              | 4                    |
+| `Race`                   |    `RaceSepolia`   |   1  |         ERC-20, ERC-721        | 50                   |
+| `SeiPacific1`            |   `SeiAtlantic2`   |   1  |               N/A              | 150                  |
+| `Solana`                 |   `SolanaDevnet`   |   1  |           SPL/SPL2022          | 8                    |
+| `Stellar`                |  `StellarTestnet`  |   1  |         SEP-41/Classic         | 2                    |
+| `Tezos`                  |   `TezosGhostnet`  |   2  |               N/A              | N/A                  |
+| `Ton`                    |    `TonTestnet`    |   1  |          TEP-74/Jetton         | 15                   |
+| `Tron`                   |     `TronNile`     |   1  |     TRC-10, TRC-20, TRC-721    | 19                   |
+| `XrpLedger` (aka Ripple) | `XrpLedgerTestnet` |   2  |               N/A              | N/A                  |
 
 {% hint style="info" %}
 \* Confirmation Delay refers to the number of blocks that must be validated or mined after a transaction has been included in a block for that transaction to be indexed by Dfns. Tier-2 chains are not indexed so finality doesn't apply.
 
-\*\* Specialty networks are not available by default. Contact sales to enable them for your org.
+\*\* Specialty networks are not available by default. Please contract your sales representative for additional information.
 {% endhint %}
 
 ### Tier-1 vs Tier-2 support
 
 We plan to add support for more blockchain networks over time. The supported features will vary depending on popularity and market demand.
 
-Tier-1 blockchain networks will support all wallet features, including automatic detection of wallet [asset](get-wallet-assets.md) and [NFT](get-wallet-nfts.md) balances if applicable, and on-chain asset transfer [history](get-wallet-history.md). Tier-1 support also include [transfer asset](transfer-asset-from-wallet.md), [broadcast transaction](broadcast-transaction-from-wallet/) and [generate signature](generate-signature-from-wallet/). Tier-1 chains also support [Webhooks](../webhooks/) driven by chain indexing.
+Tier-1 blockchain networks will support all wallet features, including automatic detection of wallet [asset](get-wallet-assets.md) and [NFT](get-wallet-nfts.md) balances if applicable, and on-chain asset transfer [history](get-wallet-history.md). Tier-1 support also include [transfer asset](transfer-asset.md), [broadcast transaction](broadcast-transaction/) and [generate signature](generate-signature/). Tier-1 chains also support [Webhooks](../webhooks/) driven by chain indexing.
 
-Tier-2 blockchain networks do not track tokens or on-chain history. Only the [balance](get-wallet-assets.md) of the native token, which is used to pay transaction fees, is returned. Tier-2 support includes [Broadcast Transaction](broadcast-transaction-from-wallet/), [Generate Signature](generate-signature-from-wallet/), and Transfer Asset for native chain cryptocurrency only. Webhooks are not available for Tier-2 chains.
+Tier-2 blockchain networks do not track tokens or on-chain history. Only the [balance](get-wallet-assets.md) of the native token, which is used to pay transaction fees, is returned. Tier-2 support includes [Broadcast Transaction](broadcast-transaction/), [Generate Signature](generate-signature/), and Transfer Asset for native chain cryptocurrency only. Webhooks are not available for Tier-2 chains.
 
 ### Pseudo Networks <a href="#pseudo-networks" id="pseudo-networks"></a>
 
-We also support wallets not tied to a blockchain network. You can create an unbound wallet by setting the `network` field to one of the supported signature schemes, currently `KeyECDSA, KeyECDSAStark, or` `KeyEdDSA`. You can use these wallets for more advanced use cases, for example:
-
-* Use Dfns wallets with blockchains Dfns doesn't natively support, as long as they use either `ECDSA, ECDSAStark` or `EdDSA`.
-* Use Dfns wallets with private blockchains that Dfns have access to, such as Polygon Supernets or Avalanche Subnets.
-* Use the same Dfns wallets across multiple blockchain networks.
-
-The unbound wallets only support [Generate Signature](generate-signature-from-wallet/). To help improve the developer experience with generate signature, our [TypeScript SDK](https://github.com/dfnsext/typescript-sdk) includes integrations with different blockchain SDKs, like [ethers.js 5](https://github.com/dfnsext/typescript-sdk/tree/m/packages/lib-ethersjs5) and [6](https://github.com/dfnsext/typescript-sdk/tree/m/packages/lib-ethersjs6) or [Solana web3.js](https://github.com/dfnsext/typescript-sdk/tree/m/packages/lib-solana). Browse through the [included examples](https://github.com/dfnsext/typescript-sdk/tree/m/examples) to see how to develop Dapps with Dfns wallets.
+{% hint style="danger" %}
+Pseudo-network based unbounded wallet creation is deprecated. For raw key signing, please use the [Keys API](../keys/) instead.
+{% endhint %}

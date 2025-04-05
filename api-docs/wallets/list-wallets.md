@@ -19,18 +19,18 @@ Retrieves a list of wallets.
 
 ### Query parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Query string parameter | Description                                                                                         | Type - Optional     |
-| ---------------------- | --------------------------------------------------------------------------------------------------- | ------------------- |
-| `owner`                | Get all delegated wallets owned by an end user, either by `userId` or `username`.                   | String _(optional)_ |
-| `limit`                | Maximum number of items to return. Default to 50.                                                   | Number _(optional)_ |
-| `paginationToken`      | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_ |
+| Query parameter   | Description                                                                                         | Type - Optional     |
+| ----------------- | --------------------------------------------------------------------------------------------------- | ------------------- |
+| `owner`           | Get all delegated wallets owned by an end user, either by `userId` or `username`.                   | String _(optional)_ |
+| `limit`           | Maximum number of items to return. Default to 100.                                                  | Number _(optional)_ |
+| `paginationToken` | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_ |
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
-| Field           | Description                                                                           | Type - Optional                                        |
-| --------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `items`         | List of wallets.                                                                      | See [Create Wallet response](create-wallet/#response). |
-| `nextPageToken` | Opaque token used to retrieve the next page of items. `undefined` if end of the list. | String _(optional)_                                    |
+| Field           | Description                                                                                                  | Type - Optional                                        |
+| --------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| `items`         | List of wallets.                                                                                             | See [Create Wallet response](create-wallet/#response). |
+| `nextPageToken` | Opaque token used to retrieve the next page of items by setting as `paginationToken` in the query parameter. | String _(optional)_                                    |
 
 ### 200 Success <a href="#response-example" id="response-example"></a>
 
@@ -55,6 +55,6 @@ Retrieves a list of wallets.
     },
     ...
   ],
-  "nextPageToken": "WszQXoE...wA1Sug=="
+  "nextPageToken": "WszQXoENUIYyoBQjJm4DE6QhCk2sB7WAh9kykUMaTQcD25SToKbuXkgf3td8ZYb2LrtopPLo35u407gwwA1Sug=="
 }
 ```

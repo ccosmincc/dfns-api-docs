@@ -16,15 +16,19 @@ Updates the name of an existing wallet.
 | ---------------- | --------------- |
 | `Wallets:Update` | Always Required |
 
-## Path parameters <a href="#path-parameters" id="path-parameters"></a>
+## Parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Path parameter | Description                                             |
-| -------------- | ------------------------------------------------------- |
-| `walletId`     | ID of the wallet. ex. `wa-1f04s-lqc9q-xxxxxxxxxxxxxxxx` |
+### Path parameters <a href="#path-parameters" id="path-parameters"></a>
 
-## Request <a href="#request-body" id="request-body"></a>
+| Path parameter | Description                      |
+| -------------- | -------------------------------- |
+| `walletId`     | Unique identifier of the wallet. |
 
-<table><thead><tr><th width="203">Field</th><th>Description</th><th width="184">Type - Optional</th></tr></thead><tbody><tr><td><code>name</code></td><td>New name for the wallet</td><td>String</td></tr></tbody></table>
+## Request Body <a href="#request-body" id="request-body"></a>
+
+| Field  | Description             | Type   |
+| ------ | ----------------------- | ------ |
+| `name` | New name for the wallet | String |
 
 #### Example
 
@@ -34,7 +38,7 @@ Updates the name of an existing wallet.
 }
 ```
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
 See [Create Wallet response](create-wallet/#response).
 

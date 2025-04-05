@@ -5,10 +5,9 @@
 Retrieves a list of historical on chain activities for the specified wallet.
 
 {% hint style="info" %}
-
-- Request headers required. See [Request Headers](../../getting-started/request-headers.md) for more information.
-- Authentication required. See [Authentication Headers](../../getting-started/request-headers.md#authentication-headers) for more information.
-  {% endhint %}
+* Request headers required. See [Request Headers](../../getting-started/request-headers.md) for more information.
+* Authentication required. See [Authentication Headers](../../getting-started/request-headers.md#authentication-headers) for more information.
+{% endhint %}
 
 ## Required Permissions
 
@@ -20,18 +19,18 @@ Retrieves a list of historical on chain activities for the specified wallet.
 
 ### Path parameters <a href="#path-parameters" id="path-parameters"></a>
 
-| Path parameter | Description                                                              |
-| -------------- | ------------------------------------------------------------------------ |
-| `walletId`     | Unique identifier of the `Wallet`. ex. `wa-1f04s-lqc9q-xxxxxxxxxxxxxxxx` |
+| Path parameter | Description                      |
+| -------------- | -------------------------------- |
+| `walletId`     | Unique identifier of the wallet. |
 
 ### Query parameters <a href="#request-example.1" id="request-example.1"></a>
 
-| Query string parameter | Required/Optional | Description                                                                                         | Type   |
-| ---------------------- | ----------------- | --------------------------------------------------------------------------------------------------- | ------ |
-| `limit`                | Optional          | Maximum number of items to return. Default to 50.                                                   | Number |
-| `paginationToken`      | Optional          | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String |
+| Query parameter   | Description                                                                                         | Type - Optional     |
+| ----------------- | --------------------------------------------------------------------------------------------------- | ------------------- |
+| `limit`           | Maximum number of items to return. Default to 100.                                                  | Number _(optional)_ |
+| `paginationToken` | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_ |
 
-## Response <a href="#response" id="response"></a>
+## Response Body <a href="#response" id="response"></a>
 
 ```json
 {
