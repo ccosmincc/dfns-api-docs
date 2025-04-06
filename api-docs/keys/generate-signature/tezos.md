@@ -1,49 +1,32 @@
-# Tezos: Generate Signature
+# Tezos
 
-## Request body <a href="#transaction-request-body" id="transaction-request-body"></a>
+Tezos supports the following signature `kinds`:
 
-<table><thead><tr><th width="178">Property</th><th width="169">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>kind</code><mark style="color:red;">*</mark></td><td>String</td><td>For Tezos, always <code>Transaction</code></td></tr><tr><td><code>transaction</code><mark style="color:red;">*</mark></td><td>Hex String</td><td>The unsigned hex encoded transaction as shown below</td></tr><tr><td><code>externalId</code></td><td>(Optional) String</td><td>A unique ID from your system. It can be leveraged to be used as an idempotency key (read more <a href="../../../advanced-topics/api-idempotency.md">here</a>)</td></tr></tbody></table>
+* `Transaction`, unsigned operation.
+
+## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+
+Signs an unsigned operation.
+
+| Field            | Description                                        | Type - Optional |
+| ---------------- | -------------------------------------------------- | --------------- |
+| `blockchainKind` | `Tezos`                                            | String          |
+| `kind`           | `Transaction`                                      | String          |
+| `transaction`    | The unsigned hex encoded operation as shown below. | String          |
 
 ### Sample request body <a href="#sample-transaction-request" id="sample-transaction-request"></a>
 
 ```json
 {
+  "blockchainKind": "Tezos",
   "kind": "Transaction",
   "transaction": "0x04c4b1966777a5d83f3f61e17bf64aa6090ddd3413ede4e24316d3334a7836486c0060f4b0700cb1b73bff168a6221c6a033de12953ebc029d82d50a8d02000100008017ed86b1bbb1c6a9399fc47b83fb8a919e013400"
 }
 ```
 
-### 200 response example <a href="#transaction-response-example" id="transaction-response-example"></a>
+### Typescript Example with Taquito
 
-```json
-{
-  "id": "sig-5fnhg-8u56n-xxxxxxxxxxxxxxxx",
-  "walletId": "wa-5kqa8-4leor-xxxxxxxxxxxxxxxx",
-  "network": "TezosGhostnet",
-  "requester": {
-    "userId": "us-3v1ag-v6b36-xxxxxxxxxxxxxxxx",
-    "tokenId": "to-7mkkj-c831n-xxxxxxxxxxxxxxxx",
-    "appId": "ap-341e6-12nj6-xxxxxxxxxxxxxxxx"
-  },
-  "requestBody": {
-    "kind": "Transaction",
-    "transaction": "0x04c4b1966777a5d83f3f61e17bf64aa6090ddd3413ede4e24316d3334a7836486c0060f4b0700cb1b73bff168a6221c6a033de12953ebc029d82d50a8d02000100008017ed86b1bbb1c6a9399fc47b83fb8a919e013400"
-  },
-  "status": "Signed",
-  "signature": {
-    "r": "0x487430064a2449da0fde2e89009f4a0d8270f252bfffbe5ed3ae7239953330bc",
-    "s": "0x1d98659c776dcfc1e0c12b93a309f23932de021572c41dfdd0b44e10b273830f",
-    "encoded": "0x487430064a2449da0fde2e89009f4a0d8270f252bfffbe5ed3ae7239953330bc1d98659c776dcfc1e0c12b93a309f23932de021572c41dfdd0b44e10b273830f"
-  },
-  "signedData": "0x82e386190d4d05ffe57db31467a83ccd6308f4eee59dff9319f2c60cf8a1f3db6c0060f4b0700cb1b73bff168a6221c6a033de12953ebc029d82d50a8d02000100008017ed86b1bbb1c6a9399fc47b83fb8a919e013400487430064a2449da0fde2e89009f4a0d8270f252bfffbe5ed3ae7239953330bc1d98659c776dcfc1e0c12b93a309f23932de021572c41dfdd0b44e10b273830f",
-  "dateRequested": "2024-01-10T20:06:08.607Z",
-  "dateSigned": "2024-01-10T20:06:08.804Z"
-}
-```
-
-## Typescript Example with Taquito
-
-First install the Taquito SDK. You can find the full documentation here: [https://taquito.io/docs/quick\_start/](https://taquito.io/docs/quick\_start/)
+First install the Taquito SDK. You can find the full documentation here: [https://taquito.io/docs/quick\_start/](https://taquito.io/docs/quick_start/)
 
 Taquito is a little special in that it requires a `signer` to forge an operation. In fact, we only need the signer to return the wallet address and the (encoded) public key. We'll initialize a Taquito RPC instance using our fake signer and a local forger (see below). After forging the operation, we can sign via [the Dfns TypeScript SDK](https://github.com/dfns/dfns-sdk-ts).
 

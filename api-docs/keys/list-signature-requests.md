@@ -32,11 +32,11 @@ List signature requests of a key.
 
 ## Response Body <a href="#response" id="response"></a>
 
-| Field           | Description                                                                                                  | Type - Optional                                                         |
-| --------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| `keyId`         | ID of the key.                                                                                               | String                                                                  |
-| `items`         | List of signature requests.                                                                                  | See [Generate Signature Response](generate-signature.md#response-body). |
-| `nextPageToken` | Opaque token used to retrieve the next page of items by setting as `paginationToken` in the query parameter. | String _(optional)_                                                     |
+| Field           | Description                                                                                                  | Type - Optional                                                       |
+| --------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| `keyId`         | ID of the key.                                                                                               | String                                                                |
+| `items`         | List of signature requests.                                                                                  | See [Generate Signature Response](generate-signature/#response-body). |
+| `nextPageToken` | Opaque token used to retrieve the next page of items by setting as `paginationToken` in the query parameter. | String _(optional)_                                                   |
 
 ### 200 Success <a href="#response-example" id="response-example"></a>
 

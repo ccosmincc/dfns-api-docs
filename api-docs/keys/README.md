@@ -10,9 +10,9 @@ Keys also support [Delegated Signing](../../advanced-topics/delegated-signing.md
 
 ## Supported Key Formats <a href="#supported-networks" id="supported-networks"></a>
 
-| Scheme  | Curve     |
-| ------- | --------- |
-| ECDSA   | secp256k1 |
-| ECDSA   | stark     |
-| EdDSA   | ed25519   |
-| Schnorr | secp256k1 |
+| Scheme  | Elliptical Curve |
+| ------- | ---------------- |
+| ECDSA   | secp256k1        |
+| ECDSA   | stark            |
+| EdDSA   | ed25519          |
+| Schnorr | secp256k1        |

@@ -1,10 +1,12 @@
-# Tezos: Broadcast Transaction
+# Tezos
 
-## Request body <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
 
-<table><thead><tr><th width="190">Property</th><th width="175">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>kind</code><mark style="color:red;">*</mark></td><td>String</td><td>For Tezos, always <code>Transaction</code></td></tr><tr><td><code>transaction</code><mark style="color:red;">*</mark></td><td>Hex String</td><td>The unsigned hex encoded transaction as shown below</td></tr><tr><td><code>externalId</code></td><td>(Optional) String</td><td>A unique ID from your system. It can be leveraged to be used as an idempotency key (read more <a href="../../../advanced-topics/api-idempotency.md">here</a>)</td></tr></tbody></table>
-
-### Sample request body <a href="#sample-transaction-request" id="sample-transaction-request"></a>
+| Field         | Description                                                                                                                                         | Type - Optional     |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `kind`        | `Transaction`                                                                                                                                       | String              |
+| `transaction` | The unsigned hex encoded transaction as shown below.                                                                                                | String              |
+| `externalId`  | A unique ID from your system. It can be leveraged to be used as an idempotency key (read more [here](../../../advanced-topics/api-idempotency.md)). | String _(optional)_ |
 
 ```json
 {
@@ -13,32 +15,9 @@
 }
 ```
 
-### 200 response example <a href="#transaction-response-example" id="transaction-response-example"></a>
+### Typescript Example with Taquito
 
-```json
-{
-  "id": "tx-5fnhg-8u56n-xxxxxxxxxxxxxxxx",
-  "walletId": "wa-5kqa8-4leor-xxxxxxxxxxxxxxxx",
-  "network": "TezosGhostnet",
-  "requester": {
-    "userId": "us-3v1ag-v6b36-xxxxxxxxxxxxxxxx",
-    "tokenId": "to-7mkkj-c831n-xxxxxxxxxxxxxxxx",
-    "appId": "ap-341e6-12nj6-xxxxxxxxxxxxxxxx"
-  },
-  "requestBody": {
-    "kind": "Transaction",
-    "transaction": "0x04c4b1966777a5d83f3f61e17bf64aa6090ddd3413ede4e24316d3334a7836486c0060f4b0700cb1b73bff168a6221c6a033de12953ebc029d82d50a8d02000100008017ed86b1bbb1c6a9399fc47b83fb8a919e013400"
-  },
-  "status": "Broadcasted",
-  "txHash": "ooESkzFG4oKQueVWX9PX1tSrBES8hWJ7N9NRtz2gK6AwVZpZqGX",
-  "dateRequested": "2024-01-10T20:06:52.915Z",
-  "dateBroadcasted": "2024-01-10T20:06:53.103Z"
-}
-```
-
-## Typescript Example with Taquito
-
-First install the Taquito SDK. You can find the full documentation here: [https://taquito.io/docs/quick\_start/](https://taquito.io/docs/quick\_start/)
+First install the Taquito SDK. You can find the full documentation here: [https://taquito.io/docs/quick\_start/](https://taquito.io/docs/quick_start/)
 
 Taquito is a little special in that it requires a `signer` to forge an operation. In fact, we only need the signer to return the wallet address and the encoded public key. We'll initialize a Taquito RPC instance using our fake signer and a local forger (see below). After forging the operation, we can distribute it via [the Dfns TypeScript SDK](https://github.com/dfns/dfns-sdk-ts).
 

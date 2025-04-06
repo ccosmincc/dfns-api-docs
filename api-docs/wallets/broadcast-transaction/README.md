@@ -2,7 +2,9 @@
 
 `POST /wallets/{walletId}/transactions`
 
-Sign & Broadcast transaction enables communication with any arbitrary smart contract by replicating the native transaction protocol fields in the body of the request.  It executes a signature, constructs the transaction for the target chain, and then broadcasts the transaction.  It can be used to make native payments, call smart contract functions, and even deploy new smart contracts. Note for reading from a "view" function on EVM chains, please use [Read Contract](../../networks/read-contract.md).
+Sign & Broadcast transaction enables communication with any arbitrary smart contract of the target blockchain. You can construct a transaction that performs a complex task and this endpoint will sign the transaction, add the signature and broadcast it to chain. It can be used to call smart contract functions like mint tokens and even deploy new smart contracts.
+
+Note: for reading from a "view" function on EVM chains, please use [Read Contract](../../networks/read-contract.md).
 
 {% hint style="info" %}
 * User action signature required. See [User Action Signing](../../authentication/user-action-signing/) for more information.
@@ -26,7 +28,7 @@ Sign & Broadcast transaction enables communication with any arbitrary smart cont
 
 ## Request Body
 
-The body of the request will depend on the chain you are targeting.   Please find the chain in question by expanding this section in the left hand navigation:
+The body of the request will depend on the chain you are targeting. Please find the chain in question by expanding this section in the left hand navigation:
 
 <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -52,9 +54,9 @@ The body of the request will depend on the chain you are targeting.   Please fin
 | `fee`                | The transaction fee.                                                                                                    | String _(optional)_ |
 | `dateConfirmed`      | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string when the transaction was confirmed on chain.             | String _(optional)_ |
 
-#### Transaction Statuses
+#### Request Statuses
 
-<table><thead><tr><th width="167">Status</th><th>Definition</th></tr></thead><tbody><tr><td><code>Pending</code></td><td>The request is pending approval due to a <a href="https://docs.dfns.co/d/api-docs/policy-engine/policies#wallets-sign-activity">policy applied</a> to the wallet.</td></tr><tr><td><code>Executing</code></td><td>The request is approved and is in the process of being executed. note this status is only set for a short time between pending and broadcasted.</td></tr><tr><td><code>Broadcasted</code></td><td>The transaction has been successfully written to the mempool.</td></tr><tr><td><code>Confirmed</code></td><td>The transaction has been confirmed on-chain by our indexing pipeline.</td></tr><tr><td><code>Failed</code></td><td>Indicates either a system failure to complete the request or the transaction failed on chain.</td></tr><tr><td><code>Rejected</code></td><td>The request has been rejected by a policy approval action.</td></tr></tbody></table>
+<table><thead><tr><th width="149.74609375">Status</th><th>Definition</th></tr></thead><tbody><tr><td><code>Pending</code></td><td>The request is pending approval due to a <a href="https://docs.dfns.co/d/api-docs/policy-engine/policies#wallets-sign-activity">policy applied</a> to the wallet.</td></tr><tr><td><code>Executing</code></td><td>The request is approved and is in the process of being executed. note this status is only set for a short time between pending and broadcasted.</td></tr><tr><td><code>Broadcasted</code></td><td>The transaction has been successfully written to the mempool.</td></tr><tr><td><code>Confirmed</code></td><td>The transaction has been confirmed on-chain by our indexing pipeline.</td></tr><tr><td><code>Failed</code></td><td>Indicates either a system failure to complete the request or the transaction failed on chain.</td></tr><tr><td><code>Rejected</code></td><td>The request has been rejected by a policy approval action.</td></tr></tbody></table>
 
 ### 200 Success
 

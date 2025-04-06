@@ -6,7 +6,7 @@ When using either one of these Wallet endpoints:
 
 * [Transfer Asset](../api-docs/wallets/transfer-asset.md)
 * [Broadcast Transaction](../api-docs/wallets/broadcast-transaction/)
-* [Generate Signature](../api-docs/wallets/generate-signature/)
+* [Generate Signature](../api-docs/wallets/generate-signature.md)
 
 you can optionally specify an `externalId` in the request body. This can be helpful for you if you want to create an ID on your side before the request, and store it on the created entity (Transfer Request, Transaction Request, Signature Request), in the `externalId` field. It can also be helpful if you need to re-submit the same API call, in case a network error (or other) prevented you to get our server's response, even if your request has actually been processed by Dfns.&#x20;
 

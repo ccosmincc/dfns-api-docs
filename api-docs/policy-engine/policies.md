@@ -25,7 +25,7 @@ A "`Wallets:Sign`" activity represents any activity which involves signing with 
 
 * a Transfer Request (created using the endpoint [Transfer Asset from Wallet](../wallets/transfer-asset.md))
 * a Transaction Request (created using the endpoint [Broadcast Transaction from Wallet](../wallets/broadcast-transaction/))
-* a Signature Request (created using the endpoint [Generate Signature from Wallet](../wallets/generate-signature/))
+* a Signature Request (created using the endpoint [Generate Signature from Wallet](../wallets/generate-signature.md))
 
 ### `Wallets:IncomingTransaction` activity
 
@@ -162,7 +162,7 @@ This rule can be used on a policy of `activityKind` = `Wallets:Sign`. It will tr
 This rule can be used on a policy of `activityKind` = `Wallets:Sign`. It will trigger if the wallet activity transfers some value to a recipient _and the destination address is NOT whitelisted_.
 
 {% hint style="info" %}
-If the wallet activity is not a value transfer, or the transaction recipient cannot be inferred from the wallet activity (eg if you use [Generate Signature](../wallets/generate-signature/)), by default the rule will trigger the policy (ie. fail closed).
+If the wallet activity is not a value transfer, or the transaction recipient cannot be inferred from the wallet activity (eg if you use [Generate Signature](../wallets/generate-signature.md)), by default the rule will trigger the policy (ie. fail closed).
 {% endhint %}
 
 If the specified whitelisted address list is empty, it basically means "no addresses are whitelisted", so the rule will trigger for any wallet activities.

@@ -26,7 +26,7 @@ Get a signature request of a key.
 
 ## Response Body <a href="#response" id="response"></a>
 
-See [Generate Signature Response](generate-signature.md#response-body).
+See [Generate Signature Response](generate-signature/#response-body).
 
 ### 200 Success <a href="#response-example" id="response-example"></a>
 

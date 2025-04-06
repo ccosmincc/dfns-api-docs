@@ -51,9 +51,9 @@ You can use any of the follow enumerated types in the `network` field of [Create
 
 We plan to add support for more blockchain networks over time. The supported features will vary depending on popularity and market demand.
 
-Tier-1 blockchain networks will support all wallet features, including automatic detection of wallet [asset](get-wallet-assets.md) and [NFT](get-wallet-nfts.md) balances if applicable, and on-chain asset transfer [history](get-wallet-history.md). Tier-1 support also include [transfer asset](transfer-asset.md), [broadcast transaction](broadcast-transaction/) and [generate signature](generate-signature/). Tier-1 chains also support [Webhooks](../webhooks/) driven by chain indexing.
+Tier-1 blockchain networks will support all wallet features, including automatic detection of wallet [asset](get-wallet-assets.md) and [NFT](get-wallet-nfts.md) balances if applicable, and on-chain asset transfer [history](get-wallet-history.md). Tier-1 support also include [transfer asset](transfer-asset.md), [broadcast transaction](broadcast-transaction/) and [generate signature](generate-signature.md). Tier-1 chains also support [Webhooks](../webhooks/) driven by chain indexing.
 
-Tier-2 blockchain networks do not track tokens or on-chain history. Only the [balance](get-wallet-assets.md) of the native token, which is used to pay transaction fees, is returned. Tier-2 support includes [Broadcast Transaction](broadcast-transaction/), [Generate Signature](generate-signature/), and Transfer Asset for native chain cryptocurrency only. Webhooks are not available for Tier-2 chains.
+Tier-2 blockchain networks do not track tokens or on-chain history. Only the [balance](get-wallet-assets.md) of the native token, which is used to pay transaction fees, is returned. Tier-2 support includes [Broadcast Transaction](broadcast-transaction/), [Generate Signature](generate-signature.md), and Transfer Asset for native chain cryptocurrency only. Webhooks are not available for Tier-2 chains.
 
 ### Pseudo Networks <a href="#pseudo-networks" id="pseudo-networks"></a>
 
