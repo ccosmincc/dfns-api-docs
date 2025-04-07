@@ -15,15 +15,15 @@ Retrieves a key by its ID.
 | ----------- | --------------- |
 | `Keys:Read` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                   |
 | -------------- | ----------------------------- |
 | `keyId`        | Unique identifier of the key. |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Create Key response](create-key.md#response).
 

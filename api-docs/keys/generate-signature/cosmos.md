@@ -22,7 +22,7 @@ Signs an unsigned transaction using SIGN\_MODE\_DIRECT.
 }
 ```
 
-### Typescript Example with CosmJS SDK
+### Typescript Example with CosmJS SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the CosmJS SDK. You can find the full documentation here: [https://cosmos.github.io/cosmjs/](https://cosmos.github.io/cosmjs/)
 

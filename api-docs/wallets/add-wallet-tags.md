@@ -16,15 +16,15 @@ Tags are a way to add arbitrary metadata to wallets which can be used to [filter
 | ------------------ | --------------- |
 | `Wallets:Tags:Add` | Always Required |
 
-## Parameters <a href="#path-parameters" id="path-parameters"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Request Body <a href="#native-currency-request-body" id="native-currency-request-body"></a>
+## Request Body
 
 | Field  | Description                     | Type - Optional |
 | ------ | ------------------------------- | --------------- |
@@ -38,9 +38,9 @@ Tags are a way to add arbitrary metadata to wallets which can be used to [filter
 }
 ```
 
-## Response Body <a href="#native-currency-response-example" id="native-currency-response-example"></a>
+## Response Body
 
-### 200 Success <a href="#native-currency-response-example" id="native-currency-response-example"></a>
+### 200 Success
 
 ```json
 {}

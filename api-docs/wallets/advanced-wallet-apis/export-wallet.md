@@ -31,7 +31,7 @@ Dfns can not guarantee the security of exported keys as we have no way to contro
 | ------------- | --------------- |
 | `Keys:Export` | Always Required |
 
-## Wallet Export Flow <a href="#request-body" id="request-body"></a>
+## Wallet Export Flow
 
 The wallet private key which you need to export, will never be transmitted through Dfns system in one piece, or in clear (un-encrypted). The process follows this flow:
 
@@ -40,7 +40,7 @@ The wallet private key which you need to export, will never be transmitted throu
 3. On Dfns side, the export encryption key gets transmitted to each node of your Signing Cluster (Your Signing Cluster is the network of nodes, also referred as "signers", where your wallet private key shares are securely stored). Each signer node will encrypt the corresponding key share to be exported. All encrypted key shares are then transmitted back to you.
 4. On your side (client-side), with the help of our [export SDK library](https://github.com/dfns/dfns-sdk-ts/tree/m/packages/sdk-keyexport-utils), you will then decrypt each encrypted key share, and re-compose the key shares into a single private key (the wallet private key). This step corresponds to [this line](https://github.com/dfns/dfns-sdk-ts/blob/m/examples/sdk/export-wallet/index.ts#L35) in our SDK wallet export example.
 
-## Request <a href="#request-body" id="request-body"></a>
+## Request Body
 
 <table data-full-width="false"><thead><tr><th>Property</th><th>Description</th><th>Type - Optional</th></tr></thead><tbody><tr><td>encryptionKey</td><td>The public key of an asymmetric key pair used to encrypt the key shares prior to transmission.</td><td>String</td></tr><tr><td>supportedSchemes</td><td>An object with the format shown below. </td><td>Array&#x3C;SupportedScheme></td></tr></tbody></table>
 
@@ -62,7 +62,7 @@ The wallet private key which you need to export, will never be transmitted throu
 }
 ```
 
-## 200 Success <a href="#response-example" id="response-example"></a>
+## 200 Success
 
 ```json
 {

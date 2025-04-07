@@ -22,7 +22,7 @@ Signs an unsigned transaction.
 }
 ```
 
-### Typescript Example with AlgoSDK
+### Typescript Example with AlgoSDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the AlgoSDK. You can find the full documentation here: [https://github.com/algorand/js-algorand-sdk](https://github.com/algorand/js-algorand-sdk)
 

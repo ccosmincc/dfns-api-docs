@@ -1,6 +1,6 @@
 # Stellar
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with Stellar SDK
+### Typescript Example with Stellar SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Stellar SDK. You can find the full documentation here: [https://stellar.github.io/js-stellar-sdk/](https://stellar.github.io/js-stellar-sdk/)
 

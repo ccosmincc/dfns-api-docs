@@ -20,7 +20,7 @@ Creates a new `Wallet` associated with the given chain (such as `Bitcoin` or `Et
 | `Keys:Delegate`    | Required if `delegateTo` is specified.                                                                               |
 | `Wallets:Tags:Add` | Required if `tags` are specified.                                                                                    |
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 | Field               | Description                                                                                                                                                                                                                                                                                                                                                             | Type - Optional           |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
@@ -42,7 +42,7 @@ Creates a new `Wallet` associated with the given chain (such as `Bitcoin` or `Et
 }
 ```
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field                    | Description                                                                                      | Type - Optional     |
 | ------------------------ | ------------------------------------------------------------------------------------------------ | ------------------- |
@@ -60,7 +60,7 @@ Creates a new `Wallet` associated with the given chain (such as `Bitcoin` or `Et
 | `dateCreated`            | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string when wallet was created.          | String              |
 | `tags`                   | List of tags.                                                                                    | Array\<String>      |
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

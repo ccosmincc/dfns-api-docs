@@ -17,7 +17,7 @@ Creates a key for the given scheme and curve. Returns a new key entity.&#x20;
 | `Keys:Create`   | Always Required.                       |
 | `Keys:Delegate` | Required if `delegateTo` is specified. |
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 | Field             | Description                                                                                                                                                    | Type - Optional      |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
@@ -36,7 +36,7 @@ Creates a key for the given scheme and curve. Returns a new key entity.&#x20;
 }
 ```
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field          | Description                                                                                      | Type - Optional      |
 | -------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -51,7 +51,7 @@ Creates a key for the given scheme and curve. Returns a new key entity.&#x20;
 | `exported`     | `true` if the key was already exported at least once.                                            | Boolean _(optional)_ |
 | `dateExported` | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string when wallet was first exported.   | String _(optional)_  |
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

@@ -18,9 +18,9 @@ Note: for reading from a "view" function on EVM chains, please use [Read Contrac
 | ----------------------------- | --------------- |
 | `Wallets:Transactions:Create` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |

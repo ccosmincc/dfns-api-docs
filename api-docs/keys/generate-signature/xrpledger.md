@@ -4,7 +4,7 @@ XRP Ledger supports the following signature `kinds`:
 
 * `Transaction`, unsigned transaction.
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 | Field            | Description                                          | Type   |
 | ---------------- | ---------------------------------------------------- | ------ |
@@ -20,7 +20,7 @@ XRP Ledger supports the following signature `kinds`:
 }
 ```
 
-### Typescript Example with xrpl.js
+### Typescript Example with xrpl.js <a href="#typescript-example" id="typescript-example"></a>
 
 First install xrpl.js. You can find the full documentation here: [https://js.xrpl.org/](https://js.xrpl.org/)
 

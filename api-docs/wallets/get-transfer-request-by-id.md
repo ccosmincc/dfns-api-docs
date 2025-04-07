@@ -15,20 +15,20 @@ Retrieves a Wallet Transfer Request by its ID.
 | ------------------------ | --------------- |
 | `Wallets:Transfers:Read` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                                |
 | -------------- | ------------------------------------------ |
 | `walletId`     | Unique identifier of the wallet.           |
 | `transferId`   | Unique identifier of the transfer request. |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Transfer Asset Response](transfer-asset.md#response-body).
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

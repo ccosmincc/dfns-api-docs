@@ -16,17 +16,17 @@ Transfer an asset out of the specified wallet to a destination address. For all 
 | -------------------------- | --------------- |
 | `Wallets:Transfers:Create` | Always Required |
 
-## Parameters <a href="#parameters" id="parameters"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Request Body <a href="#native-token" id="native-token"></a>
+## Request Body
 
-### Native Token <a href="#native-token" id="native-token"></a>
+### Native Token
 
 Transfer the native token of the network. All networks support the native token type.
 
@@ -51,7 +51,7 @@ Transfer the native token of the network. All networks support the native token 
 }
 ```
 
-### Algorand Standard Asset <a href="#alogrand-asa" id="alogrand-asa"></a>
+### Algorand Standard Asset <a href="#asa" id="asa"></a>
 
 Transfer Algorand standard assets, or [ASAs](https://developer.algorand.org/docs/get-details/asa/).
 
@@ -71,7 +71,7 @@ Transfer Algorand standard assets, or [ASAs](https://developer.algorand.org/docs
 }
 ```
 
-### Aptos Fungible Asset (AIP-21) <a href="#evm-erc20" id="evm-erc20"></a>
+### Aptos Fungible Asset (AIP-21) <a href="#aip-21" id="aip-21"></a>
 
 Transfer Aptos fungible asset that implement the [AIP-21 specification](https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-21.md).
 
@@ -91,7 +91,7 @@ Transfer Aptos fungible asset that implement the [AIP-21 specification](https://
 }
 ```
 
-### EVM Fungible Token (ERC-20) <a href="#evm-erc20" id="evm-erc20"></a>
+### EVM Fungible Token (ERC-20) <a href="#erc-20" id="erc-20"></a>
 
 Transfer fungible tokens that implement the [ERC-20 specification](https://eips.ethereum.org/EIPS/eip-20).
 
@@ -112,7 +112,7 @@ Transfer fungible tokens that implement the [ERC-20 specification](https://eips.
 }
 ```
 
-### EVM Non Fungible Token (ERC-721) <a href="#evm-erc721" id="evm-erc721"></a>
+### EVM Non Fungible Token (ERC-721) <a href="#erc-721" id="erc-721"></a>
 
 Transfer non-fungible tokens that implement the [ERC-721 specification](https://eips.ethereum.org/EIPS/eip-721)
 
@@ -133,7 +133,7 @@ Transfer non-fungible tokens that implement the [ERC-721 specification](https://
 }
 ```
 
-### Solana Program Library Token (SPL and SPL 2022) <a href="#solana-spl" id="solana-spl"></a>
+### Solana Program Library Token (SPL and SPL 2022) <a href="#spl" id="spl"></a>
 
 Transfer [SPL tokens](https://spl.solana.com/token) or [SPL 2022 tokens](https://spl.solana.com/token-2022).
 
@@ -155,7 +155,7 @@ Transfer [SPL tokens](https://spl.solana.com/token) or [SPL 2022 tokens](https:/
 }
 ```
 
-### Stellar Classic Assets (SEP-41) <a href="#stellar-sep41" id="stellar-sep41"></a>
+### Stellar Classic Assets (SEP-41) <a href="#sep-41" id="sep-41"></a>
 
 Transfer classic [Stellar Assets](https://developers.stellar.org/docs/issuing-assets/anatomy-of-an-asset). They all implement the [SEP-41 token interface](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0041.md).
 
@@ -178,7 +178,7 @@ Transfer classic [Stellar Assets](https://developers.stellar.org/docs/issuing-as
 }
 ```
 
-### TON Jetton (TEP-74) <a href="#solana-spl" id="solana-spl"></a>
+### TON Jetton (TEP-74) <a href="#tep-74" id="tep-74"></a>
 
 Transfer [Jetton](https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md) tokens.
 
@@ -198,7 +198,7 @@ Transfer [Jetton](https://github.com/ton-blockchain/TEPs/blob/master/text/0074-j
 }
 ```
 
-### TRON Native Fungible Token (TRC-10) <a href="#tron-trc10" id="tron-trc10"></a>
+### TRON Native Fungible Token (TRC-10) <a href="#trc-10" id="trc-10"></a>
 
 Transfer TRON's TRC-10 fungible tokens
 
@@ -218,7 +218,7 @@ Transfer TRON's TRC-10 fungible tokens
 }
 ```
 
-### TRON Smart Contract Fungible Token (TRC-20) <a href="#tron-trc20" id="tron-trc20"></a>
+### TRON Smart Contract Fungible Token (TRC-20) <a href="#trc-20" id="trc-20"></a>
 
 Transfer fungible tokens that implement the TRC-20 smart contract specification.
 
@@ -238,7 +238,7 @@ Transfer fungible tokens that implement the TRC-20 smart contract specification.
 }
 ```
 
-### TRON Non Fungible Token (TRC-721) <a href="#tron-trc721" id="tron-trc721"></a>
+### TRON Non Fungible Token (TRC-721) <a href="#trc-721" id="trc-721"></a>
 
 Transfer non-fungible tokens that implement the TRC-721 smart contract specification.
 

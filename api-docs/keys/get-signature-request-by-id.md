@@ -15,20 +15,20 @@ Get a signature request of a key.
 | ---------------------- | --------------- |
 | `Keys:Signatures:Read` | Always Required |
 
-## Parameters <a href="#parameters.1" id="parameters.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                                 |
 | -------------- | ------------------------------------------- |
 | `keyId`        | Unique identifier of the key.               |
 | `signatureId`  | Unique identifier of the signature request. |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Generate Signature Response](generate-signature/#response-body).
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

@@ -5,7 +5,7 @@ TRON supports the following signature `kinds`:
 * `Transaction`: unsigned transaction.
 * `Message`: an arbitrary message.
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 | Field            | Description                                          | Type - Optional |
 | ---------------- | ---------------------------------------------------- | --------------- |
@@ -21,7 +21,7 @@ TRON supports the following signature `kinds`:
 }
 ```
 
-### Typescript Example with TronWeb
+### Typescript Example with TronWeb <a href="#typescript-example" id="typescript-example"></a>
 
 First install Tronweb. You can find the full documentation here: [https://tronweb.network/docu/docs/intro/](https://tronweb.network/docu/docs/intro/)
 
@@ -46,7 +46,7 @@ const res = await dfnsClient.wallets.generateSignature({
 })
 ```
 
-## Message <a href="#message-request-body" id="message-request-body"></a>
+## Message
 
 Signs an arbitrary hex encoded message.
 

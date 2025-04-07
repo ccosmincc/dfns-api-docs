@@ -18,9 +18,9 @@ Dfns is compatible with any blockchain that uses a supported [key format](../#su
 | ------------------------ | --------------- |
 | `Keys:Signatures:Create` | Always Required |
 
-## Parameters <a href="#parameters.1" id="parameters.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                   |
 | -------------- | ----------------------------- |
@@ -28,7 +28,7 @@ Dfns is compatible with any blockchain that uses a supported [key format](../#su
 
 ## Request Body
 
-### Sign Hash
+### Hash
 
 All cryptographic scheme support hash signing. Different blockchains will apply different hash functions to compute the hash.
 
@@ -53,7 +53,7 @@ All cryptographic scheme support hash signing. Different blockchains will apply 
 }
 ```
 
-### Sign Message
+### Message
 
 In addition to the `Hash` method shown above, `EdDSA` keys also support signing arbitrary length `Message` payload longer than 32 bytes.
 
@@ -68,7 +68,7 @@ In addition to the `Hash` method shown above, `EdDSA` keys also support signing 
 }
 ```
 
-### Sign Chain Dependent Data
+### Chain Dependent Formats
 
 Keys can also be used to sign more specific formats for different blockchains. See the available supported options by expanding this section in the left hand navigation.
 
@@ -99,6 +99,8 @@ Keys can also be used to sign more specific formats for different blockchains. S
 #### Request Statuses
 
 <table><thead><tr><th width="150.0390625">Status</th><th>Definition</th></tr></thead><tbody><tr><td><code>Pending</code></td><td>The request is pending approval due to a <a href="https://docs.dfns.co/d/api-docs/policy-engine/policies#wallets-sign-activity">policy applied</a> to the wallet.</td></tr><tr><td><code>Executing</code></td><td>The request is approved and is in the process of being signed. Note this status is only set for a short time between pending and signed</td></tr><tr><td><code>Signed</code></td><td>The signature is complete and available in the response body.</td></tr><tr><td><code>Confirmed</code></td><td>The signature has been confirmed on-chain by our indexing pipeline.</td></tr><tr><td><code>Failed</code></td><td>Indicates an internal system failure to complete the request.</td></tr><tr><td><code>Rejected</code></td><td>The request has been rejected by a policy approval action.</td></tr></tbody></table>
+
+### 200 Success
 
 ```json
 {

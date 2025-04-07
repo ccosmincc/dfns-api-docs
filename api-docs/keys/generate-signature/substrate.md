@@ -22,7 +22,7 @@ Signs a generic signer payload. Note: converting the generic signer payload to a
 }
 ```
 
-### Typescript Example with polkadot{.js}
+### Typescript Example with polkadot{.js} <a href="#typescript-example" id="typescript-example"></a>
 
 First install the polkadot{.js} SDK. You can find the full documentation here: [https://polkadot.js.org/docs/](https://polkadot.js.org/docs/)
 

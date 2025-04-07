@@ -1,6 +1,6 @@
 # XRP Ledger (Ripple)
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with xrpl.js
+### Typescript Example with xrpl.js <a href="#typescript-example" id="typescript-example"></a>
 
 First install xrpl.js. You can find the full documentation here: [https://js.xrpl.org/](https://js.xrpl.org/)
 

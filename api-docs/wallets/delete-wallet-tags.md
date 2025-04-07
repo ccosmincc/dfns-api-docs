@@ -16,19 +16,21 @@ Removes the specified tags from a wallet.&#x20;
 | --------------------- | --------------- |
 | `Wallets:Tags:Delete` | Always Required |
 
-## Parameters <a href="#path-parameters" id="path-parameters"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Request Body <a href="#native-currency-request-body" id="native-currency-request-body"></a>
+## Request Body
 
 | Field  | Description                        | Type           |
 | ------ | ---------------------------------- | -------------- |
 | `tags` | The tags to remove from the wallet | Array\<String> |
+
+### Example
 
 ```shell
 {
@@ -36,9 +38,9 @@ Removes the specified tags from a wallet.&#x20;
 }
 ```
 
-## Response Body <a href="#native-currency-response-example" id="native-currency-response-example"></a>
+## Response Body
 
-### 200 Success <a href="#native-currency-response-example" id="native-currency-response-example"></a>
+### 200 Success
 
 ```json
 {}

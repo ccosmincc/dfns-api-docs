@@ -6,7 +6,7 @@ EVM chains like Ethereum, Polygon, Base, etc support the use of templates to bro
 * `Eip1559`: Use this template to interact with chains that support the [EIP-1559 ](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)gas standard.
 * `Transaction`: broadcasts a fully serialized EVM transaction.
 
-## EVM Template
+## Basic Template
 
 <table data-full-width="false"><thead><tr><th>Field</th><th>Description</th><th>Type - Optional</th></tr></thead><tbody><tr><td><code>kind</code></td><td><code>Evm</code></td><td>String</td></tr><tr><td><code>to</code></td><td>Blockchain address of target contract or payee.</td><td>String</td></tr><tr><td><code>value</code></td><td>Amount of the native currency to transfer denominated in WEI.</td><td>String <em>(optional)</em></td></tr><tr><td><code>data</code></td><td>Encoded hex string indicating which function in the smart contract to call with which parameters. Can also be an entire encoded contract in the case of contract deployment.</td><td>String <em>(optional)</em></td></tr><tr><td><code>nonce</code></td><td>The transaction number to guarantee idempotency. If omitted, it will be provided automatically. Note the same nonce can be submitted multiple times with a higher <code>maxFeePerGas</code> to "overwrite" existing transactions in the mempool.</td><td>Integer <em>(optional)</em></td></tr><tr><td><code>externalId</code></td><td>A unique ID from your system. It can be leveraged to be used as an idempotency key (read more <a href="../../../advanced-topics/api-idempotency.md">here</a>).</td><td>String <em>(optional)</em></td></tr></tbody></table>
 
@@ -34,7 +34,7 @@ Use this template to adjust the `maxFeePerGas` and `maxPriorityFeePerGas` of an 
 }
 ```
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -51,7 +51,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with Ethers
+### Typescript Example with Ethers <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Ethers JS. You can find the full documentation here: [https://docs.ethers.org/v6/](https://docs.ethers.org/v6/)
 

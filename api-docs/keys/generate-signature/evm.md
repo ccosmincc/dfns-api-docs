@@ -6,7 +6,7 @@ EVM chains like Ethereum, Polygon, Base etc support the following signature `kin
 * `Message`: an arbitrary message.
 * `Eip712`: typed structured data defined in [EIP-712](https://eips.ethereum.org/EIPS/eip-712).
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction.
 
@@ -24,7 +24,7 @@ Signs an unsigned transaction.
 }
 ```
 
-### Typescript Example with EthersJs
+### Typescript Example with EthersJs <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Ethers JS. You can find the full documentation here: [https://docs.ethers.org/v6/](https://docs.ethers.org/v6/)
 
@@ -52,7 +52,7 @@ const res = await dfnsClient.wallets.generateSignature({
 })
 ```
 
-## Message <a href="#message-request-body" id="message-request-body"></a>
+## Message
 
 Signs an arbitrary hex encoded message.
 
@@ -70,7 +70,7 @@ Signs an arbitrary hex encoded message.
 }
 ```
 
-## EIP-712 TypedData <a href="#eip712-request-body" id="eip712-request-body"></a>
+## EIP-712 TypedData
 
 Signs a typed structured data defined in [EIP-712](https://eips.ethereum.org/EIPS/eip-712).
 

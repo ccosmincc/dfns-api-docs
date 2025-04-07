@@ -15,22 +15,22 @@ Retrieves a list of transfer requests for the specified wallet.
 | ------------------------ | --------------- |
 | `Wallets:Transfers:Read` | Always Required |
 
-## Parameters <a href="#parameters.1" id="parameters.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-### Query parameters <a href="#request-example.1" id="request-example.1"></a>
+### Query parameters
 
 | Query parameter   | Description                                                                                         | Type - Optional      |
 | ----------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
 | `limit`           | Maximum number of items to return. Default to 100.                                                  | Integer _(optional)_ |
 | `paginationToken` | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_  |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field           | Description                                                                                                  | Type - Optional                                                 |
 | --------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Retrieves a list of transfer requests for the specified wallet.
 | `items`         | List of signature requests.                                                                                  | See [Transfer Asset Response](transfer-asset.md#response-body). |
 | `nextPageToken` | Opaque token used to retrieve the next page of items by setting as `paginationToken` in the query parameter. | String _(optional)_                                             |
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

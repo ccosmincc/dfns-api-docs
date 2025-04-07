@@ -4,7 +4,7 @@ Cardano supports the following signature `kinds`:
 
 * `Transaction`, unsigned transaction.
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction.
 
@@ -21,7 +21,7 @@ Signs an unsigned transaction.
 }
 ```
 
-### Typescript Example with MeshJS SDK
+### Typescript Example with MeshJS SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the MeshJS SDK. You can find the full documentation here: [https://docs.meshjs.dev/](https://docs.meshjs.dev/)
 

@@ -28,7 +28,8 @@ Since this endpoint is not authenticated, the permissions apply to the applicati
 | `Auth:Users:Create`  | Always Required |
 | `Auth:Types:EndUser` | Always Required |
 | `Wallets:Create`     | Always Required |
-| `Wallets:Delegate`   | Always Required |
+| `Keys:Create`        | Always Required |
+| `Keys:Delegate`      | Always Required |
 
 ## Request body
 
@@ -83,10 +84,10 @@ Since this endpoint is not authenticated, the permissions apply to the applicati
 
 ### Wallets
 
-|           |          |                                                                                                                                                                  |
-| --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `network` | `String` | Network used for the wallet (See [Supported Networks](../../wallets/#supported-networks) + [Pseudo Network](../../wallets/#pseudo-networks) for possible values) |
-| `name`    | `Object` | Optional name given to the wallet                                                                                                                                |
+|           |          |                                                                                                               |
+| --------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| `network` | `String` | Network used for the wallet (See [Supported Networks](../../wallets/#supported-networks) for possible values) |
+| `name`    | `Object` | Optional name given to the wallet                                                                             |
 
 ### Example
 
@@ -148,6 +149,7 @@ Since this endpoint is not authenticated, the permissions apply to the applicati
       "id": "wa-72qpd-et2jo-xxxxxxxxxxxxxxxx",
       "network": "EthereumSepolia",
       "signingKey": {
+        "id": "key-6ece3-9l565-xxxxxxxxxxxxxxxx",
         "scheme": "ECDSA",
         "curve": "secp256k1",
         "publicKey": "03e60f8b708b197c66b411e1671624ea09228f1ab560483bbe8043852217d982c1"

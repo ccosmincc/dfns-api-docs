@@ -4,7 +4,7 @@ Aptos supports the following signature `kinds`:
 
 * `Transaction`, unsigned transaction.
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction in BCS format.
 
@@ -22,7 +22,7 @@ Signs an unsigned transaction in BCS format.
 }
 ```
 
-### Transaction Format <a href="#sample-transaction-request" id="sample-transaction-request"></a>
+### Transaction Format
 
 We accept two transaction kinds to be signed:
 
@@ -35,7 +35,7 @@ All the passed transactions should be [BCS](https://aptos.dev/en/build/sdks/ts-s
 
 You can find advanced transaction constructs in our [Dfns TypeScript SDK](https://github.com/dfns/dfns-sdk-ts).
 
-### Typescript Example with Aptos SDK
+### Typescript Example with Aptos SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Aptos SDK. You can find the source code here: [https://github.com/aptos-labs/aptos-ts-sdk](https://github.com/aptos-labs/aptos-ts-sdk)
 

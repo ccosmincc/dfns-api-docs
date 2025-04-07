@@ -36,7 +36,7 @@ The wallet private key which you need to import will never be transmitted to Dfn
 3. You then call the Wallet Import endpoint, providing the API with each encrypted key share. This step corresponds to [this line](https://github.com/dfns/dfns-sdk-ts/blob/m/examples/sdk/import-wallet/index.ts#L42-L48) in our SDK wallet import example.
 4. Each of those encrypted key shares is transmitted to the corresponding secure node in the Signing Cluster. Each node will then be able to securely decrypt its key share, validate that it is correct, secure it and store it the same way as any wallet in Dfns infrastructure.
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 <table data-full-width="false"><thead><tr><th>Property</th><th>Description</th><th>Type - Optional</th></tr></thead><tbody><tr><td><code>network</code></td><td>Network enum for the wallet.</td><td>String</td></tr><tr><td><code>name</code></td><td>A name for the key.</td><td>String</td></tr><tr><td><code>protocol</code></td><td><code>CGGMP21</code>, <code>FROST</code>, <code>FROST_BITCOIN</code></td><td>String</td></tr><tr><td><code>curve</code></td><td><code>secp256k1</code>, <code>edd25519</code>, <code>stark</code></td><td>String</td></tr><tr><td><code>minSigners</code></td><td>Always <code>3</code>. Mininum number of signers to complete a signature (TSS threshold).</td><td>Integer</td></tr><tr><td><code>encryptedKeyShares</code></td><td>An array of objects containing the encrypted keyshares.  See format below. </td><td>Array&#x3C;EncryptedKeyShare></td></tr></tbody></table>
 
@@ -78,7 +78,7 @@ The wallet private key which you need to import will never be transmitted to Dfn
 }
 ```
 
-## Response Body <a href="#response-example" id="response-example"></a>
+## Response Body
 
 See [Create Wallet Response](../create-wallet/#response).
 

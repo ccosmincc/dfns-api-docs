@@ -15,19 +15,19 @@ Retrieves a Wallet by its ID.
 | -------------- | --------------- |
 | `Wallets:Read` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Create Wallet response](create-wallet/#response).
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

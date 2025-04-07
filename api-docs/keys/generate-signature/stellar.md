@@ -4,7 +4,7 @@ Stellar supports the following signature `kinds`:
 
 * `Transaction`, unsigned transaction.
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction. Note: Stellar signing needs a network dependent [passphrase](https://developers.stellar.org/docs/learn/encyclopedia/network-configuration/network-passphrases). Therefore it's tied to a specific `network` rather than the blockchain kind.
 
@@ -22,7 +22,7 @@ Signs an unsigned transaction. Note: Stellar signing needs a network dependent [
 }
 ```
 
-### Typescript Example with Stellar SDK
+### Typescript Example with Stellar SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Stellar SDK. You can find the full documentation here: [https://stellar.github.io/js-stellar-sdk/](https://stellar.github.io/js-stellar-sdk/)
 

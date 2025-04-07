@@ -1,6 +1,6 @@
 # Algorand
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with AlgoSDK
+### Typescript Example with AlgoSDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the AlgoSDK. You can find the full documentation here: [https://github.com/algorand/js-algorand-sdk](https://github.com/algorand/js-algorand-sdk)
 

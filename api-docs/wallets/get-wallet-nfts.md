@@ -15,15 +15,15 @@ Retrieves a list of NFTs owned by the specified Wallet.
 | -------------- | --------------- |
 | `Wallets:Read` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field      | Description                                                                             | Type - Optional |
 | ---------- | --------------------------------------------------------------------------------------- | --------------- |
@@ -31,7 +31,7 @@ Retrieves a list of NFTs owned by the specified Wallet.
 | `network`  | Network used for the wallet.                                                            | String          |
 | `nfts`     | A list of NFTs the wallet holds. Fields will vary depending on the NFT kind, see below. | Array\<NFT>     |
 
-### Algorand NFT Fields <a href="#response-example" id="response-example"></a>
+### Algorand NFT Fields
 
 | Field      | Description             | Type - Optional     |
 | ---------- | ----------------------- | ------------------- |

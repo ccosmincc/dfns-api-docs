@@ -15,9 +15,9 @@ Retrieves a list of keys.
 | ----------- | --------------- |
 | `Keys:Read` | Always Required |
 
-## Parameters <a href="#parameters.1" id="parameters.1"></a>
+## Parameters
 
-### Query parameters <a href="#path-parameters" id="path-parameters"></a>
+### Query parameters
 
 | Query parameter   | Description                                                                                         | Type - Optional      |
 | ----------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
@@ -25,7 +25,7 @@ Retrieves a list of keys.
 | `limit`           | Maximum number of items to return. Default to 100.                                                  | Integer _(optional)_ |
 | `paginationToken` | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_  |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field           | Description                                                                                                  | Type - Optional                                    |
 | --------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |

@@ -15,22 +15,22 @@ List signature requests of a key.
 | ---------------------- | --------------- |
 | `Keys:Signatures:Read` | Always Required |
 
-## Parameters <a href="#parameters.1" id="parameters.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                   |
 | -------------- | ----------------------------- |
 | `keyId`        | Unique identifier of the key. |
 
-### Query parameters <a href="#query-parameters" id="query-parameters"></a>
+### Query parameters
 
 | Query parameter   | Description                                                                                         | Type - Optional      |
 | ----------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
 | `limit`           | Maximum number of items to return. Default to 100.                                                  | Integer _(optional)_ |
 | `paginationToken` | Opaque token used to retrieve the next page. Returned as `nextPageToken` from the previous request. | String _(optional)_  |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field           | Description                                                                                                  | Type - Optional                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ List signature requests of a key.
 | `items`         | List of signature requests.                                                                                  | See [Generate Signature Response](generate-signature/#response-body). |
 | `nextPageToken` | Opaque token used to retrieve the next page of items by setting as `paginationToken` in the query parameter. | String _(optional)_                                                   |
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

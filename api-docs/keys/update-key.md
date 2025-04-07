@@ -16,15 +16,15 @@ Updates the name of an existing key.
 | ------------- | --------------- |
 | `Keys:Update` | Always Required |
 
-## Parameters <a href="#path-parameters" id="path-parameters"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                   |
 | -------------- | ----------------------------- |
 | `keyId`        | Unique identifier of the key. |
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 | Field  | Description           | Type   |
 | ------ | --------------------- | ------ |
@@ -38,11 +38,11 @@ Updates the name of an existing key.
 }
 ```
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Create Key response](create-key.md#response).
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

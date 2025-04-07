@@ -24,21 +24,21 @@ In most cases, when you want to implement [Delegated Signing](../../advanced-top
 | --------------- | --------------- |
 | `Keys:Delegate` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 | Field    | Description                                       | Type   |
 | -------- | ------------------------------------------------- | ------ |
 | `userId` | The ID of the end user to delegate the wallet to. | String |
 
-#### Example
+### Example
 
 ```shell
 {
@@ -46,11 +46,11 @@ In most cases, when you want to implement [Delegated Signing](../../advanced-top
 }
 ```
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 The response indicates the status of the operation.
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

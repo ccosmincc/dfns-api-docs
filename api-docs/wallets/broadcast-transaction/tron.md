@@ -1,6 +1,6 @@
 # TRON
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with TronWeb
+### Typescript Example with TronWeb <a href="#typescript-example" id="typescript-example"></a>
 
 First install TronWeb. You can find the full documentation here: [https://tronweb.network/docu/docs/intro/](https://tronweb.network/docu/docs/intro/)
 

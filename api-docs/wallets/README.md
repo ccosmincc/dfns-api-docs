@@ -4,7 +4,7 @@ The Dfns Wallets API enables you to create wallets across a wide variety of chai
 
 Wallets also support [Delegated Signing](../../advanced-topics/delegated-signing.md), enabling a non-custodial configuration and an "Apple Pay for Crypto" UX via our WebAuthn/Passkeys integrations. If you have feedback on the Wallets API, please send it to [docs@dfns.co](mailto:docs@dfns.co).
 
-### Supported networks <a href="#supported-networks" id="supported-networks"></a>
+### Supported networks
 
 You can use any of the follow enumerated types in the `network` field of [Create Wallet](https://docs.dfns.co/dfns-docs/api-docs/wallets/create-wallet#request-body):
 
@@ -55,7 +55,7 @@ Tier-1 blockchain networks will support all wallet features, including automatic
 
 Tier-2 blockchain networks do not track tokens or on-chain history. Only the [balance](get-wallet-assets.md) of the native token, which is used to pay transaction fees, is returned. Tier-2 support includes [Broadcast Transaction](broadcast-transaction/), [Generate Signature](generate-signature.md), and Transfer Asset for native chain cryptocurrency only. Webhooks are not available for Tier-2 chains.
 
-### Pseudo Networks <a href="#pseudo-networks" id="pseudo-networks"></a>
+### Pseudo Networks
 
 {% hint style="danger" %}
 Pseudo-network based unbounded wallet creation is deprecated. For raw key signing, please use the [Keys API](../keys/) instead.

@@ -24,9 +24,9 @@ Wallet Generate Signature is deprecated. Please use [Key Generate Signature](../
 | ------------------------ | --------------- |
 | `Keys:Signatures:Create` | Always Required |
 
-## Parameters <a href="#parameters.1" id="parameters.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |

@@ -1,6 +1,6 @@
 # Cardano
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with MeshJS SDK
+### Typescript Example with MeshJS SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the MeshJS SDK. You can find the full documentation here: [https://docs.meshjs.dev/](https://docs.meshjs.dev/)
 

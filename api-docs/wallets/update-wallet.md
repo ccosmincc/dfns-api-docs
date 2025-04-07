@@ -16,21 +16,21 @@ Updates the name of an existing wallet.
 | ---------------- | --------------- |
 | `Wallets:Update` | Always Required |
 
-## Parameters <a href="#path-parameters" id="path-parameters"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 | Field  | Description             | Type   |
 | ------ | ----------------------- | ------ |
 | `name` | New name for the wallet | String |
 
-#### Example
+### Example
 
 ```shell
 {
@@ -38,11 +38,11 @@ Updates the name of an existing wallet.
 }
 ```
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Create Wallet response](create-wallet/#response).
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

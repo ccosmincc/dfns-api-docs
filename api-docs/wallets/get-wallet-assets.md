@@ -15,21 +15,21 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 | -------------- | --------------- |
 | `Wallets:Read` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter | Description                      |
 | -------------- | -------------------------------- |
 | `walletId`     | Unique identifier of the wallet. |
 
-### Query parameters <a href="#path-parameters" id="path-parameters"></a>
+### Query parameters
 
 | Query parameter | Description                                                                | Type - Optional     |
 | --------------- | -------------------------------------------------------------------------- | ------------------- |
 | `netWorth`      | Set to string value `true` to quote the wallet's total asset value in USD. | String _(optional)_ |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 | Field      | Description                                                                                          | Type - Optional        |
 | ---------- | ---------------------------------------------------------------------------------------------------- | ---------------------- |
@@ -66,7 +66,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional ERC-20 Asset Fields
+### ERC-20 Asset Fields
 
 | Field      | Description                                                                                                   | Type - Optional |
 | ---------- | ------------------------------------------------------------------------------------------------------------- | --------------- |
@@ -91,7 +91,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional Algorand Asset Fields <a href="#alogrand-asa" id="alogrand-asa"></a>
+### Algorand Asset Fields
 
 | Field     | Description                                                                                 | Type - Optional |
 | --------- | ------------------------------------------------------------------------------------------- | --------------- |
@@ -116,7 +116,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional Aptos Asset Fields <a href="#evm" id="evm"></a>
+### Aptos Asset Fields
 
 | Field      | Description                                                                                                      | Type - Optional |
 | ---------- | ---------------------------------------------------------------------------------------------------------------- | --------------- |
@@ -141,7 +141,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional Iota LockedCoin Asset Fields <a href="#evm" id="evm"></a>
+### Iota LockedCoin Asset Fields
 
 | Field  | Description                                                                                | Type - Optional |
 | ------ | ------------------------------------------------------------------------------------------ | --------------- |
@@ -166,7 +166,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional Solana Asset Fields <a href="#evm" id="evm"></a>
+### Solana Asset Fields
 
 | Field  | Description                                                                                                                                                                           | Type - Optional |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
@@ -191,7 +191,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional Stellar Asset Fields <a href="#solana-spl2022" id="solana-spl2022"></a>
+### Stellar Asset Fields
 
 | Field       | Description                                                                                              | Type - Optional |
 | ----------- | -------------------------------------------------------------------------------------------------------- | --------------- |
@@ -218,7 +218,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional TON Jetton Asset Fields <a href="#solana" id="solana"></a>
+### TON Jetton Asset Fields
 
 | Field    | Description                                                                                                             | Type - Optional |
 | -------- | ----------------------------------------------------------------------------------------------------------------------- | --------------- |
@@ -243,7 +243,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional TRON TRC-10 Asset Fields <a href="#tron" id="tron"></a>
+### TRON TRC-10 Asset Fields
 
 | Field     | Description                                                                         | Type - Optional |
 | --------- | ----------------------------------------------------------------------------------- | --------------- |
@@ -268,7 +268,7 @@ Retrieves a list of assets owned by the specified wallet.  Return values vary by
 }
 ```
 
-### Additional TRON TRC-20 Asset Fields
+### TRON TRC-20 Asset Fields
 
 | Field      | Description                                                                                                     | Type - Optional |
 | ---------- | --------------------------------------------------------------------------------------------------------------- | --------------- |

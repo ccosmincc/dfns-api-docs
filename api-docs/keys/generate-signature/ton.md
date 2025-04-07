@@ -4,7 +4,7 @@ TON supports the following signature `kinds`:
 
 * `Message`, unsigned external-in message.
 
-## Message <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Message
 
 Signs an unsigned external-in message in BoC format. Note: successful signing doesn't return `signedData`. Constructing the broadcast data depends on the target smart contract.
 
@@ -22,7 +22,7 @@ Signs an unsigned external-in message in BoC format. Note: successful signing do
 }
 ```
 
-### Typescript Example with ton-core
+### Typescript Example with ton-core <a href="#typescript-example" id="typescript-example"></a>
 
 First install ton-core. You can find the full documentation here: [https://github.com/ton-org/ton](https://github.com/ton-org/ton)
 

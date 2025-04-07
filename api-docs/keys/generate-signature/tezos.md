@@ -4,7 +4,7 @@ Tezos supports the following signature `kinds`:
 
 * `Transaction`, unsigned operation.
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned operation.
 
@@ -14,8 +14,6 @@ Signs an unsigned operation.
 | `kind`           | `Transaction`                                      | String          |
 | `transaction`    | The unsigned hex encoded operation as shown below. | String          |
 
-### Sample request body <a href="#sample-transaction-request" id="sample-transaction-request"></a>
-
 ```json
 {
   "blockchainKind": "Tezos",
@@ -24,7 +22,7 @@ Signs an unsigned operation.
 }
 ```
 
-### Typescript Example with Taquito
+### Typescript Example with Taquito <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Taquito SDK. You can find the full documentation here: [https://taquito.io/docs/quick\_start/](https://taquito.io/docs/quick_start/)
 

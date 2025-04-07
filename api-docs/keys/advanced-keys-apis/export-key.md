@@ -23,7 +23,7 @@ Dfns can not guarantee the security of exported keys as we have no way to contro
 | ------------- | --------------- |
 | `Keys:Export` | Always Required |
 
-## Key Export Flow <a href="#request-body" id="request-body"></a>
+## Key Export Flow
 
 The private key which you need to export, will never be transmitted through Dfns system in one piece, or in clear (un-encrypted). The process follows this flow:
 
@@ -32,7 +32,7 @@ The private key which you need to export, will never be transmitted through Dfns
 3. On Dfns side, the export encryption key gets transmitted to each node of your Signing Cluster (Your Signing Cluster is the network of nodes, also referred as "signers", where your private key shares are securely stored). Each signer node will encrypt the corresponding key share to be exported. All encrypted key shares are then transmitted back to you.
 4. On your side (client-side), with the help of our [export SDK library](https://github.com/dfns/dfns-sdk-ts/tree/m/packages/sdk-keyexport-utils), you will then decrypt each encrypted key share, and re-compose the key shares into a single private key. This step corresponds to [this line](https://github.com/dfns/dfns-sdk-ts/blob/m/examples/sdk/export-wallet/index.ts#L35) in our SDK key export example.
 
-## Request Body <a href="#request-body" id="request-body"></a>
+## Request Body
 
 <table data-full-width="false"><thead><tr><th>Property</th><th>Description</th><th>Type - Optional</th></tr></thead><tbody><tr><td><code>encryptionKey</code></td><td>The public key of an asymmetric key pair used to encrypt the key shares prior to transmission.</td><td>String</td></tr><tr><td><code>supportedSchemes</code></td><td>An object with the format shown below. </td><td>Array&#x3C;SupportedScheme></td></tr><tr><td><code>delete</code></td><td>Whether the key should be deleted after export. Defaults to <code>true</code> when not specified.</td><td>Boolean <em>(optional)</em></td></tr></tbody></table>
 
@@ -54,7 +54,7 @@ The private key which you need to export, will never be transmitted through Dfns
 }
 ```
 
-## Response Body <a href="#response-example" id="response-example"></a>
+## Response Body
 
 <table data-full-width="false"><thead><tr><th>Property</th><th>Description</th><th>Type - Optional</th></tr></thead><tbody><tr><td><code>publicKey</code></td><td>Public key of the exported key.</td><td>String</td></tr><tr><td><code>protocol</code></td><td><code>CGGMP21</code>, <code>FROST</code>, <code>FROST_BITCOIN</code></td><td>String</td></tr><tr><td><code>curve</code></td><td><code>secp256k1</code>, <code>edd25519</code>, <code>stark</code></td><td>String</td></tr><tr><td><code>minSigners</code></td><td>Always <code>3</code>. Mininum number of signers to complete a signature (TSS threshold).</td><td>Integer</td></tr><tr><td><code>encryptedKeyShares</code></td><td>An array of objects containing the encrypted keyshares.  See format below. </td><td>Array&#x3C;EncryptedKeyShare></td></tr></tbody></table>
 

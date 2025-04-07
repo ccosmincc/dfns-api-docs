@@ -15,20 +15,20 @@ Retrieves a Wallet Transaction Request by its ID.
 | --------------------------- | --------------- |
 | `Wallets:Transactions:Read` | Always Required |
 
-## Parameters <a href="#request-example.1" id="request-example.1"></a>
+## Parameters
 
-### Path parameters <a href="#path-parameters" id="path-parameters"></a>
+### Path parameters
 
 | Path parameter  | Description                                   |
 | --------------- | --------------------------------------------- |
 | `walletId`      | Unique identifier of the wallet.              |
 | `transactionId` | Unique identifier of the transaction request. |
 
-## Response Body <a href="#response" id="response"></a>
+## Response Body
 
 See [Broadcast Transaction Response](broadcast-transaction/#response-body).
 
-### 200 Success <a href="#response-example" id="response-example"></a>
+### 200 Success
 
 ```json
 {

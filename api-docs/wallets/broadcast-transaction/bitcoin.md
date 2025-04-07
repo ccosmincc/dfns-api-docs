@@ -1,6 +1,6 @@
 # Bitcoin / Litecoin
 
-## PSBT <a href="#psbt-request-body" id="psbt-request-body"></a>
+## PSBT
 
 Signs a partially signed bitcoin transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs a partially signed bitcoin transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with BitcoinJS
+### Typescript Example with BitcoinJS <a href="#typescript-example" id="typescript-example"></a>
 
 First install the BitcoinJS SDK. You can find the full documentation here: [https://github.com/bitcoinjs/bitcoinjs-lib](https://github.com/bitcoinjs/bitcoinjs-lib)
 

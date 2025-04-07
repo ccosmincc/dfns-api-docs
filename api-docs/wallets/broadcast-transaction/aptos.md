@@ -1,6 +1,6 @@
 # Aptos
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with Aptos SDK
+### Typescript Example with Aptos SDK <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Aptos Typescript SDK. You can find the full documentation here: [https://aptos.dev/en/build/sdks/ts-sdk](https://aptos.dev/en/build/sdks/ts-sdk)
 

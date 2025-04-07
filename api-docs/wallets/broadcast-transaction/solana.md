@@ -1,6 +1,6 @@
 # Solana
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 Signs an unsigned transaction and broadcasts it to chain.
 
@@ -17,7 +17,7 @@ Signs an unsigned transaction and broadcasts it to chain.
 }
 ```
 
-### Typescript Example with Solana web3.js
+### Typescript Example with Solana web3.js <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Solana web3.js SDK. You can find the full documentation here: [https://docs.solana.com/developing/clients/javascript-api](https://docs.solana.com/developing/clients/javascript-api)
 

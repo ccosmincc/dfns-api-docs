@@ -1,6 +1,6 @@
 # Tezos
 
-## Transaction <a href="#transaction-request-body" id="transaction-request-body"></a>
+## Transaction
 
 | Field         | Description                                                                                                                                         | Type - Optional     |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -15,7 +15,7 @@
 }
 ```
 
-### Typescript Example with Taquito
+### Typescript Example with Taquito <a href="#typescript-example" id="typescript-example"></a>
 
 First install the Taquito SDK. You can find the full documentation here: [https://taquito.io/docs/quick\_start/](https://taquito.io/docs/quick_start/)
 

@@ -8,7 +8,7 @@ The Dfns Keys API enables you to sign complex transactions for any Bitcoin compa
 
 Keys also support [Delegated Signing](../../advanced-topics/delegated-signing.md), enabling a non-custodial configuration. If you have feedback on the Keys API, please send it to [docs@dfns.co](mailto:docs@dfns.co).
 
-## Supported Key Formats <a href="#supported-networks" id="supported-networks"></a>
+## Supported Key Formats
 
 | Scheme  | Elliptical Curve |
 | ------- | ---------------- |

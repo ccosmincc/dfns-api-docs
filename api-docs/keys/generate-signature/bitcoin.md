@@ -5,7 +5,7 @@ Bitcoin and Litecoin chains support the following signature `kinds`:
 * `Psbt`, partially signed bitcoin transaction, or PSBT.
 * `Bip322`, generic message defined in [BIP-322](https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki).
 
-## PSBT <a href="#psbt-request-body" id="psbt-request-body"></a>
+## PSBT
 
 Signs a partially signed bitcoin transaction.
 
@@ -23,7 +23,7 @@ Signs a partially signed bitcoin transaction.
 }
 ```
 
-### Typescript Example with BitcoinJS
+### Typescript Example with BitcoinJS <a href="#typescript-example" id="typescript-example"></a>
 
 First install the BitcoinJS SDK. You can find the full documentation here: [https://github.com/bitcoinjs/bitcoinjs-lib](https://github.com/bitcoinjs/bitcoinjs-lib)
 
@@ -84,7 +84,7 @@ const res = await dfnsClient.wallets.generateSignature({
 })
 ```
 
-## BIP-322 <a href="#bip322-signature-request-body" id="bip322-signature-request-body"></a>
+## BIP-322
 
 Signs a generic message using [BIP-322](https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki). Note: signing payload construction depends on the targeted blockchain. Therefore it's tied to a specific `network` rather than the blockchain kind.
 
