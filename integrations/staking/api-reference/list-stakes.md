@@ -1,4 +1,4 @@
-# List Exchanges
+# List Stakes
 
 `GET /staking/stakes`
 
@@ -49,8 +49,53 @@ Retrieves a list of exchanges.
         "duration": 150
       },
       "dateCreated": "2024-11-27T19:05:33.551Z"
+      "data": {
+        "stakedObjectId": "0x4efd89d885701106f732b79b837fd2fe92a692da9f2291822dcef7fc59a1ec59",
+        "expirationDate": "2025-04-19T06:49:04.793Z"
+      }}
     }
   ],
   "nextPageToken": "eJyrVspMUbJSKi7J1jUtNDI20M3LMUky0LVIK7VMSkktS81LLTE2TMpUqgUABv8NBA"
+}
+```
+
+In the `ListStake` response, a `data` field is included. This field contains detailed information about each stake. The structure and contents of `data` vary depending on the protocol used:
+
+#### Iota Data example
+
+```
+{
+  stakedObjectId: string?, // tx must be on chain to populate this field
+  expirationDate: string?, // For timelocked stake
+  amount: string,
+  validator: string,
+}
+```
+
+
+
+**Ethereum Data example**
+
+```
+{
+  validators : [
+    pubkey: string,
+    withdrawalAddress: string
+  ]
+}
+```
+
+
+
+**Babylon Data example**
+
+```
+{
+  finalityProviders: string[],
+  covenantPubkeys: string[],
+  magicBytes: string,
+  covenantThreshold: number,
+  minUnbondingTime: number,
+  lockHeight: number,
 }
 ```

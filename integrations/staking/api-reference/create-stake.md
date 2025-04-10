@@ -80,26 +80,28 @@ You need to choose between amount and lockedIotas to indicate if you want to sta
       "protocol": "Babylon",
       "duration": 150
     },
-    "dateCreated": "2024-11-27T19:05:33.551Z"
-},
-"stakeTransaction": {
-    "id": "stktx-7cmu5-u8pct-xxxxxxxxxxxxxxxx",
-    "stakeId": "stk-5q230-nl4b0-xxxxxxxxxxxxxxxx",
-    "transactionId": "tx-4j1md-uperm-xxxxxxxxxxxxxxxx",
-    "kind": "Stake",
-    "requester": {
-      "userId": "us-3htce-s75t3-xxxxxxxxxxxxxxxx",
-      "tokenId": "to-72305-jh38s-xxxxxxxxxxxxxxxx",
-      "appId": "ap-3g5ir-mt688-xxxxxxxxxxxxxxxx"
-    },
-    "requestBody": {
-      "amount": "50000",
-      "walletId": "wa-fd328-9v5a8-xxxxxxxxxxxxxxxx",
-      "provider": "Figment",
-      "protocol": "Babylon",
-      "duration": 150
-    },
-    "dateCreated": "2024-11-27T19:05:33.551Z"
+    "dateCreated": "2024-11-27T19:05:33.551Z",
+    "actions": [
+      {
+        "id": "stktx-7cmu5-u8pct-xxxxxxxxxxxxxxxx",
+        "stakeId": "stk-5q230-nl4b0-xxxxxxxxxxxxxxxx",
+        "transactionId": "tx-4j1md-uperm-xxxxxxxxxxxxxxxx",
+        "kind": "Stake",
+        "requester": {
+          "userId": "us-3htce-s75t3-xxxxxxxxxxxxxxxx",
+          "tokenId": "to-72305-jh38s-xxxxxxxxxxxxxxxx",
+          "appId": "ap-3g5ir-mt688-xxxxxxxxxxxxxxxx"
+        },
+        "requestBody": {
+          "amount": "50000",
+          "walletId": "wa-fd328-9v5a8-xxxxxxxxxxxxxxxx",
+          "provider": "Figment",
+          "protocol": "Babylon",
+          "duration": 150
+        },
+        "dateCreated": "2024-11-27T19:05:33.551Z"
+      }
+    ] 
   }
 }
 ```
