@@ -231,3 +231,4 @@
 ## Guides
 
 * [Passkey Settings - Migration guide](guides/passkey-settings-migration-guide.md)
+* [Keys & Multichain - Migration Guide](guides/keys-and-multichain-migration-guide.md)

@@ -20,7 +20,7 @@ Signs an unsigned transaction.
 {
   "blockchainKind": "Evm",
   "kind": "Transaction",
-  "message": "0x02e783aa36a71503850d40e49def82520894e5a2ebc128e262ab1e3bd02bffbe16911adfbffb0180c0"
+  "transaction": "0x02e783aa36a71503850d40e49def82520894e5a2ebc128e262ab1e3bd02bffbe16911adfbffb0180c0"
 }
 ```
 
