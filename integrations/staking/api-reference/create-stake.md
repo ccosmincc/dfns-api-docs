@@ -40,7 +40,7 @@ You need to choose between amount and lockedIotas to indicate if you want to sta
 | fields                                        | Type      | Remarks            |
 | --------------------------------------------- | --------- | ------------------ |
 | `validator`<mark style="color:red;">\*</mark> | string    |                    |
-| `amount`                                      | string    | for native staking |
+| `amount`                                      | string    |                    |
 | `lockedIotas`                                 | string\[] | for vested staking |
 
 **Example**

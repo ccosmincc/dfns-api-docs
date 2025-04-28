@@ -24,15 +24,9 @@ Creates a new stake action.
 
 ## Body <a href="#request-body" id="request-body"></a>
 
-<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th>Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol, Eg "Babylon", "Ethereum", "Iota"</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform</td><td>String</td></tr></tbody></table>
+#### Babylon
 
-
-
-Possible value for kind depending on the protocol:
-
-<table><thead><tr><th width="146.0703125">Protocol</th><th>Kind</th></tr></thead><tbody><tr><td>Babylon</td><td>Unbond | Withdraw</td></tr><tr><td>Ethereum</td><td>Withdraw</td></tr></tbody></table>
-
-
+<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th>Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol: Babylon</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform: Either Unbond or Withdraw</td><td>String</td></tr></tbody></table>
 
 **Example**
 
@@ -40,6 +34,38 @@ Possible value for kind depending on the protocol:
 {
   "protocol": "Babylon",
   "kind": "Withdraw",
+}
+```
+
+#### Ethereum
+
+<table><thead><tr><th width="141">Property</th><th width="121">Required/Optional</th><th>Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol: Ethereum</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform: Only Withdraw available</td><td>String</td></tr></tbody></table>
+
+**Example**
+
+```json
+{
+  "protocol": "Ethereum",
+  "kind": "Withdraw",
+}
+```
+
+
+
+#### Iota
+
+<table><thead><tr><th width="141">Property</th><th width="220.8203125">Required/Optional</th><th width="288.71484375">Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol: "Iota"</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform: Either Withdraw or Update</td><td>String</td></tr><tr><td>amount</td><td>Required for Withdraw / Update</td><td>Amount to withdraw or add to the stake.</td><td>String</td></tr><tr><td>lockedIotas</td><td>Required for Update (Timelocked Stake only)</td><td>Locked Iotas to add to the stake.</td><td>String[]</td></tr></tbody></table>
+
+
+
+**Example**
+
+```json
+{
+  "protocol": "Iota",
+  "kind": "Update",
+  "amount": "1000000000"
+  "lockedIotas": ["xxxxxx"] // Required when updating timelocked stakes
 }
 ```
 
