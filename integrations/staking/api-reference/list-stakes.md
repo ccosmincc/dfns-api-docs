@@ -65,9 +65,12 @@ In the `ListStake` response, a `data` field is included. This field contains det
 
 ```
 {
-  stakedObjectId: string?, // tx must be on chain to populate this field
-  expirationDate: string?, // For timelocked stake
-  amount: string,
+  stakedObjects: [{
+     id: string,
+     amount: string,
+     expirationDate?: string // For Timelock
+  }],
+  amount: string, // total amount
   validator: string,
 }
 ```
