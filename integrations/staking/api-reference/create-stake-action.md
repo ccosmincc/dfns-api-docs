@@ -54,7 +54,11 @@ Creates a new stake action.
 
 #### Iota
 
-<table><thead><tr><th width="141">Property</th><th width="220.8203125">Required/Optional</th><th width="288.71484375">Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol: "Iota"</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform: Either Withdraw or Update</td><td>String</td></tr><tr><td>amount</td><td>Required for Withdraw / Update</td><td>Amount to withdraw or add to the stake.</td><td>String</td></tr><tr><td>lockedIotas</td><td>Required for Update (Timelocked Stake only)</td><td>Locked Iotas to add to the stake.</td><td>String[]</td></tr></tbody></table>
+{% hint style="info" %}
+The Deposit action and the partial withdrawing will be available in the next release
+{% endhint %}
+
+<table><thead><tr><th width="141">Property</th><th width="220.8203125">Required/Optional</th><th width="288.71484375">Description</th><th width="80">Type</th></tr></thead><tbody><tr><td><code>protocol</code> <mark style="color:red;">*</mark></td><td>Required</td><td>Staking Protocol: "Iota"</td><td>String</td></tr><tr><td><code>kind</code> <mark style="color:red;">*</mark></td><td>Required</td><td>The action to perform: Either Withdraw or Deposit</td><td>String</td></tr><tr><td>amount</td><td>Required for Withdraw / Update</td><td>Amount to withdraw or add to the stake.</td><td>String</td></tr><tr><td>lockedIotas</td><td>Required for Depost (Timelocked Stake only)</td><td>Locked Iotas to add to the stake.</td><td>String[]</td></tr></tbody></table>
 
 
 
@@ -63,9 +67,9 @@ Creates a new stake action.
 ```json
 {
   "protocol": "Iota",
-  "kind": "Update",
+  "kind": "Deposit",
   "amount": "1000000000"
-  "lockedIotas": ["xxxxxx"] // Required when updating timelocked stakes
+  "lockedIotas": ["xxxxxx"] // Required when depositing new timelocked stakes
 }
 ```
 
