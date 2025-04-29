@@ -63,6 +63,8 @@ In the `ListStake` response, a `data` field is included. This field contains det
 
 #### Iota Data example
 
+
+
 ```
 {
   stakedObjects: [{
@@ -75,7 +77,22 @@ In the `ListStake` response, a `data` field is included. This field contains det
 }
 ```
 
+{% hint style="info" %}
 
+
+This new format will be available on the next release.\
+Currently it's still:\
+\
+&#x20;   {
+
+```
+  stakedObjectId: string,
+  amount: string, // total amount
+  validator: string,
+  expirationDate?: string // for timelocked
+}
+```
+{% endhint %}
 
 **Ethereum Data example**
 
