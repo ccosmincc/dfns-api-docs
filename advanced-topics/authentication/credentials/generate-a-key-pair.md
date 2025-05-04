@@ -60,18 +60,18 @@ import crypto from 'crypto'
 
 // EDDSA Key
 const eddsaKey = crypto.generateKeyPairSync('ed25519')
-const eddsaPublicKey: string = eddsaKey.publicKey.export({ type: 'spki', format: 'pem' })
-const eddsaPrivateKey: string = eddsaKey.privateKey.export({ type: 'pkcs8', format: 'pem' })
+const eddsaPublicKey: string = eddsaKey.publicKey.export({ type: 'spki', format: 'pem' }).toString('utf8')
+const eddsaPrivateKey: string = eddsaKey.privateKey.export({ type: 'pkcs8', format: 'pem' }).toString('utf8')
 
 // ECDSA Key
 const ecdsaKey: crypto.KeyPairKeyObjectResult = crypto.generateKeyPairSync('ec', { namedCurve: 'P-256' })
-const ecdsaPublicKey: string = ecdsaKey.publicKey.export({ type: 'spki', format: 'pem' })
-const ecdsaPrivateKey: string = ecdsaKey.privateKey.export({ type: 'pkcs8', format: 'pem' })
+const ecdsaPublicKey: string = ecdsaKey.publicKey.export({ type: 'spki', format: 'pem' }).toString('utf8')
+const ecdsaPrivateKey: string = ecdsaKey.privateKey.export({ type: 'pkcs8', format: 'pem' }).toString('utf8')
 
 // RSA Key
 const rsaKey: crypto.KeyPairKeyObjectResult = crypto.generateKeyPairSync('rsa', { modulusLength: 3072 })
-const rsaPublicKey: string = rsaKey.publicKey.export({ type: 'pkcs1', format: 'pem' })
-const rsaPrivateKey: string = rsaKey.privateKey.export({ type: 'pkcs1', format: 'pem' })
+const rsaPublicKey: string = rsaKey.publicKey.export({ type: 'pkcs1', format: 'pem' }).toString('utf8')
+const rsaPrivateKey: string = rsaKey.privateKey.export({ type: 'pkcs1', format: 'pem' }).toString('utf8')
 ```
 {% endcode %}
 {% endtab %}
