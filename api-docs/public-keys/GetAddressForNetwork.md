@@ -21,7 +21,7 @@ Returns the `publicKey`'s address on a given `network`.
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`. 
@@ -31,7 +31,7 @@ Returns the `publicKey`'s address on a given `network`.
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`.

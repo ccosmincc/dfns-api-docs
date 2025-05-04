@@ -29,7 +29,7 @@ This endpoint is meant for webhook setup and troubleshooting. Calling the endpoi
 ```json
 {
   "status": "500",
-  "error": "Internal Server Serror", // optional, may not be there if status is "200"
+  "error": "Internal Server error", // optional, may not be there if status is "200"
 }
 ```
 

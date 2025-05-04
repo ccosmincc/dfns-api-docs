@@ -51,7 +51,7 @@ Multiple tags can be attached to same entity.
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`.

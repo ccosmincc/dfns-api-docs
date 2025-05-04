@@ -24,7 +24,7 @@ Archives or unarchives a permission, depending on the body of the request. Respo
 
 ## Request body <a href="#request-body" id="request-body"></a>
 
-In the **request body** specify wheter the permission is to be **archived** or **unarchived**.
+In the **request body** specify whether the permission is to be **archived** or **unarchived**.
 
 <table><thead><tr><th width="187">property</th><th width="188">Type - Required</th><th>Description</th></tr></thead><tbody><tr><td><code>isArchived</code></td><td>Boolean - Required</td><td>Specify whether to archive or unarchive permission.</td></tr></tbody></table>
 

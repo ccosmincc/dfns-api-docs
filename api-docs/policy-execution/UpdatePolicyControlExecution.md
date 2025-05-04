@@ -33,7 +33,7 @@ _Please consult OpenAPI file full breakdown and including nested properties._
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`.

@@ -4,7 +4,7 @@ When new users are created within your organization, they will receive a registr
 
 This registration process includes registering the user's authentication method. Either:
 - WebAuthn (Passwordless MFA)
-- a custom Key (public key of a public/private keypair) if this user will only interact programatically.
+- a custom Key (public key of a public/private keypair) if this user will only interact programmatically.
 
 The registration flow is as following:
 

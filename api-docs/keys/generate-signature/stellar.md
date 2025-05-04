@@ -8,11 +8,11 @@ Stellar supports the following signature `kinds`:
 
 Signs an unsigned transaction. Note: Stellar signing needs a network dependent [passphrase](https://developers.stellar.org/docs/learn/encyclopedia/network-configuration/network-passphrases). Therefore it's tied to a specific `network` rather than the blockchain kind.
 
-| Field         | Description                                          | Type - Optiional |
-| ------------- | ---------------------------------------------------- | ---------------- |
-| `network`     | A supported Stellar network.                         | String           |
-| `kind`        | `Transaction`                                        | String           |
-| `transaction` | The unsigned hex encoded transaction as shown below. | String           |
+| Field         | Description                                          | Type - Optional |
+| ------------- | ---------------------------------------------------- | --------------- |
+| `network`     | A supported Stellar network.                         | String          |
+| `kind`        | `Transaction`                                        | String          |
+| `transaction` | The unsigned hex encoded transaction as shown below. | String          |
 
 ```json
 {

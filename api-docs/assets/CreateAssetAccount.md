@@ -75,7 +75,7 @@ Unable to find `publicKey` provided in request body.
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`. 
@@ -85,7 +85,7 @@ Unable to create asset account entity with provided configuration
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`. 
@@ -95,7 +95,7 @@ Unable to create asset account entity with provided configuration
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`.

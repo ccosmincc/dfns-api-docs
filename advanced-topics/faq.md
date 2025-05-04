@@ -35,7 +35,7 @@ A: On iOS you can set up an "associated domains entitlement" for the app to spec
 
 A: the goal is for one Dfns User to register 2 different WebauthN credentials (passkeys) on separate devices (device A and B). The action to add a new credential, requires a User Action flow, which means the signature from an existing valid credential is required to be able to complete creation of a new credential. Let’s start from initial state: the end user is registered, and has an existing WebauthN credential on device A (Credential A). You will need a mechanism that allows credential A (on device A) to sign the user action challenge generated from the action started by device B (creating credential B).\
 \
-Theoretically, to achieve that goal, there could be a way that the whole flow happens on device B, and then when device B needs the signature from cred A device A, device A & B communicate directly via bluetooth / NFC / wifi or something... But that’s just theoric though, and we havent’t tried or tested, and that really depend on what the device will support.\
+Theoretically, to achieve that goal, there could be a way that the whole flow happens on device B, and then when device B needs the signature from cred A device A, device A & B communicate directly via bluetooth / NFC / wifi or something... But that’s just theoretic though, and we haven't tried or tested, and that really depend on what the device will support.\
 \
 So the more practical approach, is rather to have this flow be orchestrated by your server, such as this:\
 

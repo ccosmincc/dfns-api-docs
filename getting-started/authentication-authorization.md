@@ -63,11 +63,11 @@ Depending on the Identity you are using, the Credentials supported are such:
 
 Passkeys is the common term used to describe the Fido2 standard called "WebAuthn". It is a web authentication standard supported by most modern browsers, phones and devices, which leverages your devices key-management features (like touch ID on a mac, a phone authenticator, a yubikey, some password managers support creating and storing passkeys, etc).
 
-Thos passkeys can then be used by the user to sign payloads when needed. Here's some screenshots with some examples of WebAuthn prompts shown in your browser during Credential creation, or during Signing using those Credentials.
+Those passkeys can then be used by the user to sign payloads when needed. Here's some screenshots with some examples of WebAuthn prompts shown in your browser during Credential creation, or during Signing using those Credentials.
 
 ![](<../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
-Below is an example of the promps a user can see on a web app, when a challenge needs to be signed with the passkey: it's asking the user for his biometrics (fingerprint) before using the passkey to sign.
+Below is an example of the prompts a user can see on a web app, when a challenge needs to be signed with the passkey: it's asking the user for his biometrics (fingerprint) before using the passkey to sign.
 
 ![](<../.gitbook/assets/image (2) (1).png>)
 

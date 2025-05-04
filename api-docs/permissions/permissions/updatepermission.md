@@ -24,9 +24,9 @@ Updates an existing permission. Response either returns the updated permission (
 
 ## Request body <a href="#request-body" id="request-body"></a>
 
-In the **request body** specify the **permisison name** and/or a list of **operations** that this permission will allow.
+In the **request body** specify the **permission name** and/or a list of **operations** that this permission will allow.
 
-<table><thead><tr><th width="177">propery</th><th width="204">Required/Optional</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>String - Optional</td><td>Name of the permission.</td></tr><tr><td><code>operations</code></td><td>String Array - Optional</td><td>List of allowed operations. <br>This <a href="../permissions-overview.md#list-of-operations">this list</a> for all the available operations.</td></tr></tbody></table>
+<table><thead><tr><th width="177">Property</th><th width="204">Required/Optional</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>String - Optional</td><td>Name of the permission.</td></tr><tr><td><code>operations</code></td><td>String Array - Optional</td><td>List of allowed operations. <br>This <a href="../permissions-overview.md#list-of-operations">this list</a> for all the available operations.</td></tr></tbody></table>
 
 ## Request example <a href="#request-example.1" id="request-example.1"></a>
 

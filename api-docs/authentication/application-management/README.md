@@ -22,7 +22,7 @@ Applications do not have access to the API on their own. However, applications d
    * If no, grant access.
 3. Does the user have access to the requested endpoint and resource?
    * If no, deny access.
-4. Is the User's JWT for a token (sevice account or personal access token)?
+4. Is the User's JWT for a token (service account or personal access token)?
    * If no, grant access.
 5. Does the token have access to the requested endpoint?
    * If no, deny access.

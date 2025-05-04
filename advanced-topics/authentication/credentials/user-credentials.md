@@ -19,7 +19,7 @@ A registration challenge is returned from calls to:
 * /auth/registration/delegated
 * /auth/credentials/init
 
-In all cases the challenge format is the same. You will recieve an object with the following properties (additional properties exist for managing credentials with WebAuthn):
+In all cases the challenge format is the same. You will receive an object with the following properties (additional properties exist for managing credentials with WebAuthn):
 
 | field                          | description                                                                            |
 | ------------------------------ | -------------------------------------------------------------------------------------- |

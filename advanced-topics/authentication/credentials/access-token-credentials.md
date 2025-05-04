@@ -27,7 +27,7 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEYsHwe62PxDXIXjvSd0/ZdndtvenLqZ6u62pp2/SejCs4
 
 ### Converting from raw to PEM
 
-Some cyrpto libraries do not support PEM format. If your library supports exporting to SPKI you can export the key into SPKI format, base64 encode that value, and place it inside the header and footer.
+Some crypto libraries do not support PEM format. If your library supports exporting to SPKI you can export the key into SPKI format, base64 encode that value, and place it inside the header and footer.
 
 ```javascript
 function arrayBufferToBase64(buffer) {

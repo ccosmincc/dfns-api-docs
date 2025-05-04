@@ -58,7 +58,7 @@ Format:
   // identifies the kind of credentials that can be used to sign the login challenge
   "supportedCredentialKinds": [
     {
-      // the kind of credental; can be `Fido2` or `Key`
+      // the kind of credential; can be `Fido2` or `Key`
       "kind": "string",
       // indicates if the credential can be used as a first factor, second factor, or either; can be `first`, `second`, or `either`
       "factor": "string",

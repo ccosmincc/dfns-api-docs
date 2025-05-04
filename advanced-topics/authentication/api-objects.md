@@ -8,7 +8,7 @@ The Client Data object is used during [user registration](../../api-docs/authent
 
 When using Fido2, the `client data` object is built inside the authenticator and returned to the browser `base64url` encoded. There is no need to modify it.&#x20;
 
-More information can be found in the [W3C webauthn offical specification](https://w3c.github.io/webauthn/#dictdef-collectedclientdata)
+More information can be found in the [W3C webauthn official specification](https://w3c.github.io/webauthn/#dictdef-collectedclientdata)
 
 | field       | type      | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -65,7 +65,7 @@ This attestation data object is used during [registration](../../api-docs/authen
 
 When using Fido2, the `attestation data` object is built inside the authenticator and returned to the browser. It is encoded using [CBOR specification](https://cbor.io/). There is no need to modify it.&#x20;
 
-More information can be found in the [W3C webauthn offical specification](https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-attestationobject).&#x20;
+More information can be found in the [W3C webauthn official specification](https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-attestationobject).&#x20;
 
 It is an opaque object and there is no need to describe it here.
 
@@ -175,11 +175,11 @@ cba00cc2224e76aa12e42cd0e30a1a73e5525ed0dccb7e29e709fee3a1e98dec
 
 So the `attestation data` object is built with the following fields
 
-| Field       | Type   | Description                                                                                                                                                                                                                                                                              |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `publicKey` | string | PEM encoded public key that can be used to verify the signature for the credential. This the same public key than the one in the [Credential Info Fingerprint ](api-objects.md#credential-info-fingerprint)object                                                                        |
-| `signature` | string | The signature produced by signing the "stringified" [Credential Info Fingerprint](api-objects.md#credential-info-fingerprint) object with the credentials private key, using the algorithm specified in `algorithm`. Needs to be encoded as a hex string                                 |
-| `algorithm` | string | <p><code>Optional</code> The algorithm/digest that the credential will use to sign data. If the algoritm is not specified the algorithm will be determined by the key. Can be one of the following choices:<br><code>RSA-SHA256</code><br><code>SHA256</code><br><code>SHA512</code></p> |
+| Field       | Type   | Description                                                                                                                                                                                                                                                                                |
+| ----------- | ------ |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `publicKey` | string | PEM encoded public key that can be used to verify the signature for the credential. This the same public key than the one in the [Credential Info Fingerprint ](api-objects.md#credential-info-fingerprint)object                                                                          |
+| `signature` | string | The signature produced by signing the "stringified" [Credential Info Fingerprint](api-objects.md#credential-info-fingerprint) object with the credentials private key, using the algorithm specified in `algorithm`. Needs to be encoded as a hex string                                   |
+| `algorithm` | string | <p><code>Optional</code> The algorithm/digest that the credential will use to sign data. If the algorithm is not specified, the algorithm will be determined by the key. Can be one of the following choices:<br><code>RSA-SHA256</code><br><code>SHA256</code><br><code>SHA512</code></p> |
 
 {% hint style="danger" %}
 In order for the server to properly verify the signature, the "stringified" operation of the Credential Info Fingerprint object needs to be done with the following requirements:

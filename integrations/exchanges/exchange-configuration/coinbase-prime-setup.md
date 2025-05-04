@@ -14,7 +14,7 @@ In **Pending Keys**, click **Activate Key** for the newly created Read API Key.
 <figure><img src="../../../.gitbook/assets/coinbase_prime_activate_key_1.jpg" alt=""><figcaption></figcaption></figure>
 <figure><img src="../../../.gitbook/assets/coinbase_prime_activate_key_2.jpg" alt=""><figcaption></figcaption></figure>
 
-Log into your Dfns dashboard and click **Settings=>Exchanges=>New**. Copy the Access Key, Passphrase and Sigining API keys from Coinbase Prime into the corresponding fields. 
+Log into your Dfns dashboard and click **Settings=>Exchanges=>New**. Copy the Access Key, Passphrase and Signing API keys from Coinbase Prime into the corresponding fields. 
 
 Go back to Coinbase Prime and generate a second Write API key this time activating **Transfer** in the Access Type screen.:
 

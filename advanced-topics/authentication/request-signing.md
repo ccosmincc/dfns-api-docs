@@ -17,7 +17,7 @@ A signing challenge is returned from a call to:
 
 * /auth/action/init
 
-You will recieve an object with the following properties (additional properties exist for signing with WebAuthn):
+You will receive an object with the following properties (additional properties exist for signing with WebAuthn):
 
 | field                | description                                                       |
 | -------------------- | ----------------------------------------------------------------- |

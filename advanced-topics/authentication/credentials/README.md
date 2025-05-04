@@ -73,7 +73,7 @@ Create Credential with Code flow demo
 
 ## Key Creds vs WebauthN creds
 
-`Key` credentials give extra flexibilty over `WebAuthn` to design signing to meet your needs. For example, you could choose to have a key without a passphrase (disabling MFA), to support scenarios where you don't want the user to have to interact with your application to sign a transaction. Or, as another example, you could build an integration with an authentication device that is not supported by WebAuthn.
+`Key` credentials give extra flexibility over `WebAuthn` to design signing to meet your needs. For example, you could choose to have a key without a passphrase (disabling MFA), to support scenarios where you don't want the user to have to interact with your application to sign a transaction. Or, as another example, you could build an integration with an authentication device that is not supported by WebAuthn.
 
 ## Security of Key Based Credentials
 

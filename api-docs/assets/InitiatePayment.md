@@ -66,7 +66,7 @@ Payment initiation payload is invalid, and missing parameters. See `description`
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`. 
@@ -76,7 +76,7 @@ GasStation requires additional top-up.
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`. 
@@ -86,7 +86,7 @@ Asset Account doesn't have sufficient funds to process payment
 * serviceName: `String`. 
 * message: `String`. 
 * causes: `String[]`. 
-* shouldTriggerInvestigaton: `Bool`. 
+* shouldTriggerInvestigation: `Bool`. 
 * isDfnsError: `Bool`. 
 * httpStatus: `Integer`. 
 * errorName: `String`.

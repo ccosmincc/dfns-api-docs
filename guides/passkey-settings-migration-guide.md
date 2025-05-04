@@ -46,7 +46,7 @@ So, with that design, the app ID you use in the Dfns API request also determines
 
 After gathering our customer’s feedback, it turns out Dfns Applications are more a source of confusion and complication than anything else, especially newcomers.
 
-The main reason is that the relationship between the Application and the Passkey is not obvious. We – Dfns – thought that tying those things together would hide away the complexity from users and make it more seemless. Turns out that people were more confused as to what those things meant, and the relationship between them, and in turn, how to set it up properly.
+The main reason is that the relationship between the Application and the Passkey is not obvious. We – Dfns – thought that tying those things together would hide away the complexity from users and make it more seamless. Turns out that people were more confused as to what those things meant, and the relationship between them, and in turn, how to set it up properly.
 
 Also, since we offer different kind of credentials to authenticate (like raw asymmetric keys), but the `rpID` / `origin` setup on Applications is only relevant in the context of a passkey credential, that could add to the confusion.
 
